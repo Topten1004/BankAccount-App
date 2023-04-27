@@ -1,0 +1,792 @@
+.dailyplanner {
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-flex: 1;
+  -webkit-flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+}
+.appPage .BTAppMainPane .app-toolbar {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 26px;
+  margin: 0 0 5px 0;
+  min-height: 30px;
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+.appPage .BTAppMainPane .app-toolbar .btn-toolbar {
+  border: none;
+  /*	padding: 0; */
+  float: right;
+  margin: 0 0 0 10px;
+}
+.appPage .BTAppMainPane .app-toolbar .btn-toolbar i {
+  cursor: pointer;
+}
+.appPage .BTAppMainPane .app-toolbar .btn-toolbar.primary {
+  float: left;
+  margin: 0 10px 0 0;
+}
+.appPage .BTAppMainPane .app-toolbar .staffer-select {
+  float: left;
+}
+.appPage .BTAppMainPane .app-toolbar .btn-add {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  padding: 1px 10px 1px 0;
+  padding-right: 15px;
+}
+.appPage .BTAppMainPane .btn-primary {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+/* buttons with an icon look like they're spaced weirdly when they aren't the first button in
+   a list of buttons. Adjust the left padding to be the default bootstrap btn-sm padding-left. */
+.appPage .BTAppMainPane .btn-sm.btn-with-icon {
+  padding: 4px 17px 4px 12px;
+}
+/* exception is required because the toggle carat wasn't sizing properly */
+a.btn.btn-primary.dropdown-toggle {
+  display: inline-block !important;
+}
+.appPage .BTAppMainPane .btn-default {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+.btn-primary span.btn-text-center {
+  width: 100%;
+}
+.btn-default span.btn-text-center {
+  width: 100%;
+}
+.appPage .BTAppMainPane .app-toolbar .bt_select_box {
+  height: 26px;
+}
+.appPage .BTAppMainPane .app-toolbar .bt_select_box .btn_select:before {
+  margin-top: 11px;
+}
+.appPage .BTAppMainPane .app-toolbar .staffer-select span {
+  font-family: 'work-sans';
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.appPage .BTAppMainPane .app-toolbar .staffer-select .bt_select_box {
+  min-width: 150px;
+  vertical-align: middle;
+}
+.appPage .BTAppMainPane .app-toolbar .staffer-select .staffer-drop {
+  min-width: 160px;
+  vertical-align: middle;
+}
+.appPage .BTAppMainPane .app-toolbar .staffer-select .staffer-drop .input_wrap {
+  padding-right: 26px;
+}
+.appPage .BTAppMainPane .app-toolbar .staffer-select .staffer-drop .input_wrap .text_input {
+  padding-left: 8px;
+}
+.dailyplanner .app-toolbar .btn-toolbar .viewToggle {
+  border: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+.dailyplanner .app-toolbar .btn-toolbar .viewToggle > a {
+  font-family: 'work-sans';
+  font-size: 11px;
+  font-weight: normal;
+}
+.dailyplanner .wrapper {
+  background: transparent;
+}
+.dailyplanner .binder {
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-box-orient: horizontal;
+  -webkit-flex: 1;
+  -webkit-flex-direction: row;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+}
+.dailyplanner .page {
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  background-color: #F7F2F0;
+  border: 1px solid #dddddd;
+  flex: 1;
+  position: relative;
+}
+.dailyplanner .page .header {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: #696564;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  height: 44px;
+  text-transform: uppercase;
+}
+.dailyplanner .page .header * {
+  color: #ffffff;
+}
+.dailyplanner .page .header .reportReceiptMenu .icon-file {
+  margin: 5px 0 0 15px;
+}
+.dailyplanner .page .header .reportReceiptMenu .dropdown-menu {
+  width: 270px;
+  padding: 10px;
+}
+.dailyplanner .page .header .reportReceiptMenu .dropdown-menu > li > a {
+  text-transform: none;
+}
+.dailyplanner .page .header .reportReceiptMenu .dropdown-menu .icon-file {
+  margin: 0 15px 0 0;
+}
+.dailyplanner .page .header .amt,
+.dailyplanner .page .header .dow {
+  font-family: 'work-sans';
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 14px;
+  margin-bottom: 0;
+  overflow: hidden;
+  word-break: break-word;
+}
+.dailyplanner .page .header .dow {
+  float: left;
+  margin: 0 15px;
+  width: 340px;
+}
+.dailyplanner .page .header .amt {
+  float: right;
+  font-size: 18px;
+  line-height: 0.7em;
+  margin: 0 15px;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 170px;
+}
+.dailyplanner .page .header .amt label {
+  font-size: 9px;
+  margin-bottom: 0;
+}
+.dailyplanner .page .toggleAll {
+  padding: 0 15px;
+  -moz-box-shadow: 1px 1px 0px #ffffff inset;
+  -webkit-box-shadow: 1px 1px 0px #ffffff inset;
+  border-bottom: 1px solid #DAD8D8;
+  box-shadow: 1px 1px 0px #ffffff inset;
+  cursor: pointer;
+}
+.dailyplanner .page.day {
+  background-color: #fbf8f7;
+  border-right: 1px solid #dddddd;
+}
+.dailyplanner .page.edit {
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  border-left: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+.dailyplanner .page.edit .form_wrapper,
+.dailyplanner .page.edit .form_wrapper > form {
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+.dailyplanner .page.edit .form_wrapper > form .container {
+  -moz-box-shadow: 1px 1px 0 #ffffff inset;
+  -webkit-box-shadow: 1px 1px 0 #ffffff inset;
+  border-top: 1px solid #dddddd;
+  box-shadow: 1px 1px 0 #ffffff inset;
+}
+.dailyplanner .page.edit .form_wrapper > form .container.messages {
+  margin: 0;
+  padding: 15px 50px;
+}
+.dailyplanner .page.edit .form_wrapper > form .container.buttons {
+  margin: 0;
+  padding: 15px 50px;
+}
+.dailyplanner .page.edit .panel-center {
+  margin: auto 25%;
+  text-align: center;
+}
+.dailyplanner .page.edit .tab-content {
+  overflow: auto;
+  padding: 0 50px 0 50px;
+}
+.dailyplanner .footer {
+  margin-top: 10px;
+  width: 100%;
+  z-index: 2;
+}
+.dailyplanner .footer .alert {
+  margin: 0;
+}
+.dailyplanner .planner-zoom-box {
+  bottom: 83px;
+  height: 20px;
+  left: -110px;
+  position: absolute;
+  text-align: center;
+  width: 185px;
+}
+.dailyplanner .page .zerostate {
+  padding: 50px;
+}
+.dailyplanner .page.day .zerostate {
+  display: none;
+  z-index: 1;
+}
+.dailyplanner .page.edit .alert {
+  text-align: left;
+  margin-top: 0px;
+  padding: 6px;
+}
+.dailyplanner .page.edit .alert h3,
+.dailyplanner .page.edit .alert h4,
+.dailyplanner .page.edit .alert h5 {
+  margin-top: 0;
+}
+.dailyplanner .submitForm {
+  overflow: auto;
+}
+.dailyplanner .page.day .DailyPlannerData_planner {
+  left: 0;
+  overflow: auto;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+.dailyplanner .page.day .DailyPlannerData {
+  padding-left: 0px;
+  position: relative;
+}
+.DailyPlannerData li.entry {
+  -moz-box-shadow: 1px 1px 0px #ffffff inset;
+  -webkit-box-shadow: 1px 1px 0px #ffffff inset;
+  border-bottom: 1px solid #DAD8D8;
+  box-shadow: 1px 1px 0px #ffffff inset;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 13px 7px 13px 15px;
+}
+.dailyplanner .entry > input[type="checkbox"] {
+  margin-right: 3px;
+}
+.DailyPlannerData .entry .entryWrapper {
+  flex-grow: 1;
+}
+.DailyPlannerData li.entry.active {
+  background-color: #F4EFEC;
+}
+.dailyplanner .page.day .DailyPlannerData .title {
+  float: left;
+  font-size: 15px;
+  width: 75%;
+}
+.dailyplanner .page.day .DailyPlannerData .hours {
+  font-family: 'work-sans';
+  font-size: 13px;
+  font-weight: normal;
+  -webkit-box-align: center;
+  -webkit-box-pack: end;
+  align-content: center;
+  align-items: center;
+  color: #83AF33;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: inline-flex;
+  float: right;
+  justify-content: flex-end;
+  letter-spacing: 1px;
+  position: relative;
+  text-align: right;
+  width: 24%;
+}
+.dailyplanner .page.day .DailyPlannerData .hours .icon-bt-locked {
+  margin-right: 5px;
+}
+input.amount-highlight {
+  color: #83AF33;
+}
+.dailyplanner .page.day .DailyPlannerData .details {
+  color: #7b7675;
+  display: inline-block;
+  font-size: 13px;
+  text-align: left;
+  width: 100%;
+}
+.dailyplanner .page.day .DailyPlannerData .notes {
+  color: #7b7675;
+  font-size: 11px;
+  line-height: 16px;
+  overflow: hidden;
+}
+.dailyplanner .page ul.btt-table > li {
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+}
+.dailyplanner .page ul.btt-table > li:last-child {
+  border-bottom: 1px solid #dddddd;
+}
+.dailyplanner .page .form_header_toolbar {
+  -moz-box-shadow: 0 -1px 0 #dddddd inset;
+  -webkit-box-shadow: 0 -1px 0 #dddddd inset;
+  background-color: #F7F2F0;
+  border-bottom: 1px solid #ffffff;
+  box-shadow: 0 -1px 0 #dddddd inset;
+  height: 45px;
+  margin-bottom: 25px;
+  padding: 15px 15px 15px 50px;
+  width: 100%;
+}
+.dailyplanner .page .form_header_toolbar .close {
+  filter: alpha(opacity=100);
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 17px;
+  opacity: 1;
+  position: relative;
+  top: -3px;
+  vertical-align: top;
+}
+.dailyplanner .page .form_header_toolbar .close:after {
+  content: '';
+  margin-left: 5px;
+  padding: 1px;
+  text-align: center;
+  -ms-interpolation-mode: nearest-neighbor;
+  background-image: url('images/_sprite-icons@2x.png');
+  background-position: -180px -157px;
+  background-repeat: no-repeat;
+  background-size: 383px 495px;
+  display: inline-block;
+  height: 16px;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  width: 16px;
+}
+.dailyplanner .page .form-header {
+  color: #443E3D;
+  float: left;
+  font-size: 13px;
+  line-height: 13px;
+  margin: 0;
+}
+.dailyplanner .binder > .page > .zerostate {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+}
+.dailyplanner .binder > .day.page > .zerostate {
+  padding-top: 100px;
+}
+.dailyplanner .zerostate.details {
+  padding-top: 150px;
+}
+.DailyPlannerData li.entryHelp {
+  border: none;
+  bottom: 10px;
+  color: #a4a2a1;
+  font-style: italic;
+  height: auto !important;
+  left: 10px;
+  line-height: 150%;
+  position: absolute;
+  text-align: left;
+  width: 50%;
+  z-index: 0;
+}
+.dailyplanner .binder > .page > .zerostate.white {
+  background-color: #ffffff;
+  height: 100%;
+  text-align: center;
+}
+.dailyplanner .page .zerostate.entries {
+  text-align: center;
+}
+.dailyplanner .page .zerostate .help {
+  display: inline-block;
+  height: auto;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+  width: 60s%;
+  z-index: 1;
+}
+.dailyplanner .page .reportDetails.help {
+  padding: 50px;
+}
+.dailyplanner .page .reportDetails .clickable {
+  color: #4C7998;
+}
+.dailyplanner .page .reportDetails .clickable:hover {
+  color: #ee7039;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.dailyplanner .page .zerostate .help p,
+.dailyplanner .page .reportDetails.help p {
+  color: #a4a2a1;
+  font-style: italic;
+  line-height: 150%;
+  margin-top: 20px;
+}
+.dailyplanner .page .reportDetails.help ul {
+  text-align: center;
+}
+.dailyplanner .page .reportDetails.help ul li > label {
+  margin-left: 0;
+}
+.dailyplanner .page .reportDetails.help .receipt-buttons {
+  margin-top: 10px;
+}
+.dailyplanner .page .zerostate .help i {
+  margin-bottom: 20px;
+}
+.dailyplanner .page .zerostate .help h4 {
+  margin: 20px 0;
+}
+.dailyplanner .edit.page .zerostate .help {
+  left: 10px;
+  position: relative;
+  top: 40%;
+}
+.page .zerostate .please-wait {
+  margin: 0px auto;
+  max-width: 220px;
+}
+.page .zerostate .please-wait p {
+  margin-top: 20px;
+}
+.dailyplanner .day.page .icon-loading {
+  left: 45%;
+  position: absolute;
+  top: 50%;
+  z-index: 0;
+}
+.dailyplanner .edit.page .zerostate .help.review {
+  top: 25%;
+}
+.dailyplanner .page .zerostate.submitForm .submitBox {
+  border-top: 1px solid #eeeeee;
+  margin-top: 20px;
+  padding: 0;
+}
+.dailyplanner .page .submitForm .submitBox .updateRptName {
+  background: #fdf2e1;
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #cccccc;
+  text-align: left;
+}
+.dailyplanner .page .zerostate.submitForm .submitBox li:last-child {
+  border-top: 1px solid #eeeeee;
+  margin: 0;
+  padding-top: 20px;
+}
+.dailyplanner .page .zerostate.submitForm .submitBox .receiptUploader {
+  margin-top: 10px;
+}
+.dailyplanner .page .receiptWrapper {
+  margin: 10px 0;
+}
+.dailyplanner .page.day .DailyPlannerData.zoom6 li > .notes {
+  max-height: 200px;
+}
+.dailyplanner .page.day .DailyPlannerData.zoom5 li > .notes {
+  max-height: 65px;
+}
+.dailyplanner .page.day .DailyPlannerData.zoom4 li > .notes {
+  max-height: 50px;
+}
+.dailyplanner .page.day .DailyPlannerData.zoom3 li > .notes {
+  max-height: 34px;
+}
+.dailyplanner .page.day .DailyPlannerData.zoom2 li > .notes {
+  max-height: 16px;
+}
+.dailyplanner .page.day .DailyPlannerData.zoom1 li > .notes {
+  font-size: 10px;
+  line-height: 140%;
+  max-height: 16px;
+}
+.dailyplanner .page.day .DailyPlannerData.zoom0 li {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 6px 15px 1px 15px;
+}
+.dailyplanner .page.day .DailyPlannerData.zoom1 li {
+  padding: 8px 15px 8px 15px;
+}
+.dailyplanner .page.day .DailyPlannerData.zoom0 li > .title,
+.dailyplanner .page.day .DailyPlannerData.zoom0 li > .hours,
+.dailyplanner .page.day .DailyPlannerData.zoom1 li > .title,
+.dailyplanner .page.day .DailyPlannerData.zoom1 li > .hours {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dailyplanner .page.day .DailyPlannerData.zoom0 li > .details,
+.dailyplanner .page.day .DailyPlannerData.zoom1 li > .details {
+  font-size: 11px;
+  line-height: 100%;
+}
+.dailyplanner .page.day .DailyPlannerData.zoom0 li > .notes,
+.dailyplanner .page.day .DailyPlannerData.zoom0 li > .hours .icon-bt-locked,
+.dailyplanner .page.day .DailyPlannerData.zoom1 li > .hours .icon-bt-locked {
+  display: none;
+}
+/* REPORT TABLES */
+.table-reports .picklist {
+  text-align: center;
+}
+.table-reports .status {
+  font-family: 'work-sans';
+  font-size: 11px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+.table-reports .status a i {
+  margin-right: 5px;
+  vertical-align: top;
+}
+.table-reports .number {
+  text-align: left;
+}
+.table-reports .number.amt {
+  /*	text-align: left;     REMOVED BY BRI TO ALIGN EXPENSE LIST TOTALS RIGHT */
+  color: #83AF33;
+}
+.table-reports .number.amt a {
+  float: right;
+}
+.receipt-controls {
+  text-align: right;
+}
+ul.form-group li .receipt-controls > .btn:not(:first-child) {
+  margin-left: 10px;
+}
+.print-report-container {
+  vertical-align: bottom;
+}
+.icon-print-sm.print-report {
+  margin-right: 10px;
+  vertical-align: bottom;
+}
+.modal.form-narrow .expenseReceiptDialogList {
+  max-width: 200px;
+  margin: 0px auto;
+}
+.timesheet_wrapper .day.page .getting-started.wrapper {
+  padding-bottom: 250px;
+}
+.modal-content .receipt-view img {
+  max-width: 100%;
+  min-width: 400px;
+  height: auto;
+}
+#expenseHistory .paging-parent {
+  margin-bottom: 6px;
+  border-bottom: 1px solid #dddddd;
+}
+/* RJM_2016-11-07 -- toggle view styles */
+.toggleView {
+  white-space: nowrap;
+}
+/* RJM_2016-11-03 -- dynamic active/inactive button group css */
+div.groupByToolbar {
+  vertical-align: top !important;
+}
+div.groupByToolbar > a:first-child {
+  border-left: 1px solid #cccccc !important;
+}
+div.groupByToolbar a {
+  border-right: 1px solid #cccccc !important;
+  border-top: 1px solid #cccccc !important;
+  border-bottom: 1px solid #cccccc !important;
+  background-color: #fbf8f7 !important;
+  vertical-align: top !important;
+}
+div.groupByToolbar a > i {
+  vertical-align: top !important;
+}
+div.groupByToolbar a > span {
+  padding: 0 6px 0 3px;
+  line-height: 23px !important;
+  color: #696564;
+}
+div.groupByToolbar a.active:first-child {
+  border-left-color: #a4a2a1 !important;
+}
+div.groupByToolbar a.active {
+  margin-left: -1px !important;
+  border-left: 1px solid #696564 !important;
+  border-right-color: #696564 !important;
+  border-top-color: #696564 !important;
+  border-bottom-color: #696564 !important;
+  background-color: #696564 !important;
+}
+div.groupByToolbar a.active:first-child {
+  margin-left: 0 !important;
+}
+div.groupByToolbar a.active > span {
+  padding: 0 6px 0 3px;
+  color: white;
+}
+div.groupByToolbar div.dropdown-menu a {
+  width: 100%;
+  text-align: left;
+  margin-left: 0 !important;
+}
+div.groupByToolbar div.dropdown-menu {
+  min-width: initial !important;
+}
+div.groupByToolbar div.dropdown-menu a:first-child {
+  border-top-width: 1px !important;
+}
+div.groupByToolbar div.dropdown-menu a,
+div.groupByToolbar div.dropdown-menu a.active {
+  border-top-width: 0 !important;
+  border-left: 1px solid #a4a2a1 !important;
+  border-right: 1px solid #a4a2a1 !important;
+}
+div.groupByToolbar div.dropdown-menu a {
+  overflow: hidden;
+}
+div.groupByToolbar div.dropdown-menu a.active {
+  margin-left: 0 !important;
+  background-color: #696564 !important;
+}
+div.groupByToolbar a.dropdown-toggle.active {
+  border-left: 1px solid #a4a2a1 !important;
+  padding: 3px 0;
+}
+div.groupByToolbar .dropdown-toggle span {
+  padding: 0 !important;
+}
+div.groupByToolbar .dropdown-toggle span {
+  padding: 3px;
+}
+div.groupByToolbar div.dropdown-menu {
+  min-width: initial !important;
+  margin-top: 3px;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(51, 51, 51, 0.3);
+  -moz-box-shadow: 2px 2px 4px 0px rgba(51, 51, 51, 0.3);
+  box-shadow: 2px 2px 4px 0px rgba(51, 51, 51, 0.3);
+}
+/* RJM_2016-11-03 -- dynamic active/inactive button group css */
+/* Bulk Edit Time Modal Styles */
+.bt-bulk-dialog .modal-dialog {
+  width: 410px !important;
+}
+.bt-bulk-dialog .modal-dialog h6 {
+  margin-top: 0;
+}
+.bt-bulk-dialog .modal-dialog .pointer {
+  cursor: pointer;
+}
+.bt-bulk-dialog .modal-dialog .margin-bottom-0 {
+  margin-bottom: 0;
+}
+.bt-bulk-dialog .modal-dialog .margin-bottom-17 {
+  margin-bottom: 17px;
+}
+.bt-bulk-dialog .modal-dialog .margin-top-17 {
+  margin-top: 17px;
+}
+.bt-bulk-dialog .modal-dialog div.alert label.small:before {
+  content: '-';
+  position: absolute;
+  left: 3px;
+}
+.bt-bulk-dialog .modal-dialog .form-group button:active,
+.bt-bulk-dialog .modal-dialog .form-group button:focus {
+  background-color: #696564;
+  border-color: #696564;
+}
+.bt-bulk-dialog .modal-dialog .form-group button.active {
+  background-color: #7b7675 !important;
+  border-color: #7b7675 !important;
+}
+.bt-bulk-dialog .modal-dialog .tick {
+  background: url(images/_sprite-icons@2x.png) no-repeat -180px -270px;
+  background-size: 383px 495px;
+  display: inline-block;
+  height: 10px;
+  margin-right: 5px;
+  width: 11px;
+}

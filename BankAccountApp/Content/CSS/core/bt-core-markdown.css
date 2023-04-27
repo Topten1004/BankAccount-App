@@ -1,0 +1,52 @@
+.bt-markdown {
+  display: flex !important;
+}
+.bt-markdown i {
+  cursor: pointer;
+  position: absolute;
+}
+.bt-markdown textarea {
+  display: none;
+}
+.bt-markdown.active .display-text {
+  display: none;
+}
+.bt-markdown .edit-container {
+  display: none !important;
+}
+.bt-markdown.active textarea {
+  display: inline-block;
+  flex: 1;
+  min-height: 100px;
+  max-height: 283px;
+}
+.bt-markdown.active .edit-container > label {
+  margin-top: 15px;
+}
+.bt-markdown.active .edit-container .preview-box {
+  border: 1px solid #888888;
+  overflow-y: scroll;
+  background-color: #e6e6e6;
+  min-height: 100px;
+  max-height: 283px;
+  cursor: not-allowed;
+}
+.bt-markdown.active .edit-container .preview-box > * {
+  pointer-events: none;
+}
+.bt-markdown.active .edit-container {
+  display: flex !important;
+}
+.bt-markdown.active .edit-container .fixed-panel {
+  justify-content: flex-end;
+}
+.bt-markdown .edit-container .error-message {
+  color: #db4226;
+  padding-top: 10px;
+}
+.bt-markdown .edit-container .character-countdown {
+  color: #a4a2a1;
+}
+.bt-markdown .btn {
+  margin: 10px 0;
+}

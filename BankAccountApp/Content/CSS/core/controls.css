@@ -1,0 +1,677 @@
+/* SWITCH CONTROL:  ON/OFF buttons used in place of a checkbox */
+.bt-switch {
+  border: 0px;
+  margin: 0px 5px;
+}
+.bt-switch .btn-off,
+.bt-switch .btn-on {
+  background-color: #DAD8D8;
+  border-color: #DAD8D8;
+  color: #7b7675;
+  padding: 4px 0;
+  width: 40px;
+}
+.bt-switch .btn-off {
+  background-color: #DAD8D8;
+  border-color: #DAD8D8;
+}
+.btn-off.active {
+  background-color: #696564;
+  border-color: #696564;
+  color: #ffffff;
+}
+.btn-off:hover {
+  background-color: #7b7675;
+  border-color: #7b7675;
+  color: #ffffff;
+}
+.btn-on.active {
+  background-color: #db4226;
+  border-color: #db4226;
+  color: #ffffff;
+}
+.btn-on:hover {
+  background-color: #ea492a;
+  border-color: #ea492a;
+  color: #ffffff;
+}
+.btn-new {
+  padding: 0 8px;
+  width: 79px;
+}
+/* bt-listBox: a UL that acts like a table with a "?" reveal button in the upper right for each row */
+/* FORMAT/EXAMPLE HTML:
+<ul class="bt-listBox">
+	<li>
+		<p class="title">title</p>
+		<div class="item-controls"><a><i class="icon-question"></i></a></div>	
+		<p class="hint">notes...</p>
+	</li>		
+	...
+</ul>
+*/
+ul.bt-listBox {
+  overflow: auto;
+  padding: 0;
+}
+ul.bt-listBox > li {
+  background-color: #fbf8f7;
+  border-bottom: 1px solid #D1CCC9;
+  display: block;
+  float: left;
+  list-style-type: none;
+  padding: 5px 25px;
+  position: relative;
+  width: 100%;
+}
+ul.bt-listBox:before,
+ul.bt-listBox:after {
+  content: " ";
+  display: table;
+}
+ul.bt-listBox:after {
+  clear: both;
+}
+ul.bt-listBox p.title {
+  margin: 0;
+}
+ul.bt-listBox p.title .entry-name {
+  padding-left: 15px;
+}
+ul.bt-listBox p.hint {
+  color: #8B817A;
+  font-size: 12px;
+  margin: 15px 10px 16px 90px;
+}
+ul.bt-listBox p.hint .hint-text {
+  display: block;
+  max-width: 480px;
+  padding-left: 15px;
+}
+ul.bt-listBox p.hint .btn {
+  margin-left: 15px;
+  margin-top: 15px;
+}
+/* helper classes for quick css fixes */
+.w100 {
+  width: 100%;
+}
+.inline-block {
+  display: inline-block;
+}
+/* when a control appears inside of a toolbar, it needs to be formatted differently */
+.toolbar > .btn-group {
+  height: 24px;
+}
+.toolbar label {
+  color: #8E8580;
+  font-size: 11px;
+  font-weight: normal;
+  margin-right: 12px;
+}
+.toolbar input.form-control {
+  display: inline-block;
+  width: 115px;
+  /* Prev: 200px */
+}
+/* a utility toolbar is upper-right */
+.bt-utility-bar {
+  -webkit-box-flex: 1;
+  align-items: center;
+  display: inline-flex;
+  float: right;
+  margin-left: auto;
+  text-align: right;
+}
+.bt-utility-bar .btn-icon .icon-box-up {
+  margin-right: 5px;
+  position: relative;
+  top: 3px;
+}
+.bt-utility-bar .btn-icon .icon-box-dn {
+  position: relative;
+  top: 3px;
+}
+.bt-utility-bar .btn-icon .icon-close-box {
+  position: relative;
+  top: 3px;
+}
+/* Basic search box + icon */
+.search-box {
+  display: inline-block;
+  width: 175px;
+}
+.search-box input[type="text"] {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  border: 1px solid #cccccc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  color: #443E3D;
+  font-size: 13px;
+  height: 24px;
+  line-height: 1.42857143;
+  margin-left: 10px;
+  padding: 5px 12px;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  width: 100%;
+}
+/* bt-carousel css (from jcarousel) */
+.bt-carousel-wrapper {
+  -moz-border-radius: 5px;
+  -moz-box-shadow: 0 0 2px #a4a2a1;
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow: 0 0 2px #a4a2a1;
+  border: 10px solid #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 2px #a4a2a1;
+  margin: 20px auto;
+  padding: 0 45px;
+  position: relative;
+}
+.bt-carousel {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.bt-carousel > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.bt-carousel > ul > li {
+  float: left;
+}
+/** Carousel Controls **/
+.bt-carousel-control.prev,
+.bt-carousel-control.next {
+  -moz-border-radius: 30px;
+  -moz-box-shadow: 0 0 2px #a4a2a1;
+  -webkit-border-radius: 30px;
+  -webkit-box-shadow: 0 0 2px #a4a2a1;
+  background: #4E443C;
+  border-radius: 30px;
+  box-shadow: 0 0 2px #a4a2a1;
+  color: #ffffff;
+  font: 24px/27px Arial, sans-serif;
+  height: 30px;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 1px #000000;
+  top: 49%;
+  width: 30px;
+}
+.bt-carousel-control.prev {
+  left: 2px;
+}
+.bt-carousel-control.next {
+  right: 2px;
+}
+.bt-carousel-control.prev:hover span,
+.bt-carousel-control.next:hover span {
+  display: block;
+}
+.bt-carousel-control.prev.inactive,
+.bt-carousel-control.next.inactive {
+  cursor: default;
+  opacity: 0.2;
+}
+/** Carousel Pagination **/
+.bt-carousel-pagination {
+  bottom: -6px;
+  left: 45px;
+  position: absolute;
+}
+.bt-carousel-pagination a {
+  background: #ffffff;
+  border-radius: 14px;
+  color: #4E443C;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 14px;
+  margin-right: 2px;
+  min-width: 14px;
+  opacity: 0.75;
+  padding: 3px;
+  text-align: center;
+  text-decoration: none;
+}
+.bt-carousel-pagination a.active {
+  background: #4E443C;
+  color: #ffffff;
+  opacity: 1;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
+}
+.btn-sm.btn-transparent {
+  align-items: center;
+  border: 0;
+  display: inline-flex;
+  font-size: 11px;
+}
+.btn-transparent:hover {
+  text-decoration: underline;
+}
+.btn.btn-transparent:active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-transparent .glyphicon.primary {
+  background-color: #db4226;
+  color: white;
+  height: 18px;
+  margin-right: 6px;
+  padding-top: 2px;
+  width: 18px;
+}
+.btn-sm.btn-text {
+  align-items: center;
+  border: 0;
+  color: #db4226;
+  display: inline-flex;
+  font-size: 11px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.btn-text:hover {
+  text-decoration: underline;
+}
+.btn.btn-text:active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn.checkbox {
+  margin-top: 0;
+  min-height: 0;
+}
+.btn.btn-sm.checkbox input[type="checkbox"] {
+  margin-top: 2px;
+}
+/* Classes used to support the bt-process angular directive (we add btn-completed when a task is completed, and then use 'return' to fade back to the standard background after x seconds) */
+.btn-group.disabled > .dropdown-toggle {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  opacity: 0.65;
+  pointer-events: none;
+}
+.btn-primary.btn-completed,
+.btn-completed,
+.btn-group.btn-completed .btn {
+  background-color: #96c93c;
+  border-color: #96c93c;
+  color: #ffffff;
+}
+.btn.return {
+  -moz-transition: background 0.5s linear, border 0.5s linear;
+  -ms-transition: background 0.5s linear, border 0.5s linear;
+  -o-transition: background 0.5s linear, border 0.5s linear;
+  -webkit-transition: background 0.5s linear, border 0.5s linear;
+  transition: background 0.5s linear, border 0.5s linear;
+}
+/* INSIGHT BLOCKS are lists of insights (eg - numbers + labels) that show up in a list or stand-alone 
+
+a typical insight div looks like this:  <div class="insight-block"><strong>1234</strong><p>label</p></div>
+multiple insights can be created in an insight-block-list ul:
+	<ul class="insight-block-list">
+		<li><strong>123</strong><p>label1</p></li>
+		<li><strong>123</strong><p>label1</p></li>
+		<li><strong>123</strong><p>label1</p></li>
+		<li class="total"><strong>123</strong><p>label1</p></li>
+	</ul>
+
+You can use insight-list, insight-list-sm, insight-block or insight-block-sm (along with total) 
+
+*/
+.totals-only {
+  min-height: 40px;
+}
+ul.insight-block-list {
+  display: inline-block;
+  margin-bottom: 0;
+  max-height: 34px;
+  padding: 0;
+  position: relative;
+}
+ul.insight-block-list li {
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-flex: 1;
+  -webkit-flex-direction: column;
+  border-right: 1px solid #dddddd;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0 12px;
+  position: relative;
+  text-align: center;
+}
+ul.insight-block-list li > strong {
+  font-family: 'Oswald';
+  font-size: 16px;
+  font-weight: normal;
+  padding-top: 2px;
+  text-align: center;
+  vertical-align: middle;
+}
+ul.insight-block-list li > p {
+  font-family: 'work-sans';
+  font-size: 11px;
+  font-weight: normal;
+  align-self: center;
+  line-height: 100%;
+  margin: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+ul.insight-block-list li.total {
+  border-right: 0;
+  display: inline-block;
+  padding-right: 0;
+  text-align: right;
+}
+ul.insight-block-list li.total > strong {
+  color: #96c93c;
+  font-size: 24px;
+  text-align: right;
+}
+ul.insight-block-list li.total > p {
+  text-align: right;
+}
+.insight-block {
+  display: inline-block;
+  padding: 0 0 0 12px;
+  text-align: center;
+}
+.insight-block > strong {
+  font-family: 'Oswald';
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
+}
+.insight-block > p {
+  font-family: 'work-sans';
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 100%;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.insight-block.total {
+  text-align: right;
+}
+.insight-block.total > strong {
+  color: #96c93c;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+ul.insight-block-list-sm {
+  -webkit-flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 40px;
+  padding: 0;
+  position: relative;
+}
+ul.insight-block-list-sm li {
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-flex: 1;
+  -webkit-flex-direction: column;
+  border-right: 1px solid #dddddd;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0 12px;
+  position: relative;
+  text-align: center;
+}
+ul.insight-block-list-sm li > strong {
+  font-family: 'Oswald';
+  font-size: 14px;
+  font-weight: normal;
+  padding-top: 2px;
+  text-align: center;
+  vertical-align: middle;
+}
+ul.insight-block-list-sm li > p {
+  font-family: 'work-sans';
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 100%;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+ul.insight-block-list-sm li.total {
+  border-right: 0;
+  padding-right: 0;
+  text-align: right;
+}
+ul.insight-block-list-sm li.total > strong {
+  color: #96c93c;
+  font-size: 18px;
+  padding-top: 0px;
+  text-align: right;
+}
+ul.insight-block-list-sm li.total > p {
+  text-align: right;
+}
+.insight-block-sm {
+  display: inline-block;
+  padding: 0 12px;
+  text-align: center;
+}
+.insight-block-sm > strong {
+  font-family: 'Oswald';
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+}
+.insight-block-sm > p {
+  font-family: 'work-sans';
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 100%;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.insight-block-sm.total {
+  text-align: right;
+}
+.insight-block-sm.total > strong {
+  color: #96c93c;
+  font-size: 18px;
+}
+.inline-warning {
+  color: #C63A20;
+}
+/*************
+RANGE SELECTOR
+*************/
+.bt-range-selector:hover {
+  opacity: 1;
+}
+/*
+horizontal
+*/
+.bt-range-selector {
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  background-color: #5a5756;
+  color: #ffffff;
+  height: 20px;
+  opacity: 0.4;
+  padding: 0 30px 0 30px;
+  position: relative;
+  user-select: none;
+  width: 100%;
+}
+.bt-range-selector > input[type='range'] {
+  -webkit-appearance: none;
+  background-color: #db4226;
+  box-shadow: inset 0 1px 1px #C63A20;
+  cursor: pointer;
+  height: 6px;
+  padding: 0px;
+  width: 100%;
+}
+/*CHROME*/
+.bt-range-selector > input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background-color: #ffffff;
+  border: 1px solid #a4a2a1;
+  border-radius: 15px;
+  cursor: e-resize;
+  height: 15px;
+  width: 15px;
+}
+.bt-range-selector > input[type='range'].vertical::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background-color: #ffffff;
+  border: 1px solid #a4a2a1;
+  border-radius: 15px;
+  cursor: ns-resize;
+  height: 15px;
+  width: 15px;
+}
+/*MOZILLA*/
+.bt-range-selector > input[type='range']::-moz-range-track {
+  -moz-appearance: none;
+  background-color: #db4226;
+  box-shadow: inset 0 0 5px #333333;
+  cursor: pointer;
+  height: 6px;
+}
+.bt-range-selector > input[type='range']::-moz-range-thumb {
+  -moz-appearance: none;
+  background-color: #ffffff;
+  border: 1px solid #a4a2a1;
+  border-radius: 15px;
+  cursor: e-resize;
+  height: 15px;
+  width: 15px;
+}
+.bt-range-selector > input[type='range'].vertical::-moz-range-thumb {
+  -moz-appearance: none;
+  background-color: #ffffff;
+  border: 1px solid #a4a2a1;
+  border-radius: 15px;
+  cursor: ns-resize;
+  height: 15px;
+  width: 15px;
+}
+/*IE*/
+.bt-range-selector > input[type="range"]::-ms-fill-upper {
+  background-color: #db4226;
+}
+.bt-range-selector > input[type="range"]::-ms-fill-lower {
+  background-color: #db4226;
+}
+.bt-range-selector > input[type="range"]::-ms-track {
+  border: none;
+  color: #db4226;
+}
+.bt-range-selector > input[type="range"]::-ms-thumb {
+  background-color: #ffffff;
+  border: 1px solid #a4a2a1;
+  border-radius: 15px;
+  cursor: e-resize;
+  height: 15px;
+  width: 15px;
+}
+.bt-range-selector > input[type="range"].vertical::-ms-thumb {
+  background-color: #ffffff;
+  border: 1px solid #a4a2a1;
+  border-radius: 15px;
+  cursor: ns-resize;
+  height: 15px;
+  width: 15px;
+}
+.bt-range-selector .rangeIco {
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Verdana;
+  height: 13px;
+  line-height: 12px;
+  position: absolute;
+  width: 13px;
+}
+.bt-range-selector .rangeIco.vertical {
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.bt-range-selector .rangeIco.minusIco {
+  background: url('images/zoom-icons.png') bottom left no-repeat;
+  font-size: 14px;
+  left: 8px;
+  top: 3px;
+}
+.bt-range-selector .rangeIco.plusIco {
+  background: url('images/zoom-icons.png') top left no-repeat;
+  bottom: 4px;
+  font-size: 11px;
+  right: 8px;
+}
+/*END RANGE SELECTOR*/
+.alert.alert-dark {
+  background-color: #e3d9d5;
+}
+/*Button-list (ul ... used in sign+submit and invoice create wizard*/
+.button-list > li {
+  line-height: 55px;
+  font-size: 14px;
+  border-bottom: solid 1px #dddddd;
+  box-shadow: 0 1px 0px #ffffff;
+  cursor: pointer;
+  position: relative;
+}
+.button-list > li:first-child {
+  border-top: solid 1px #dddddd;
+}
+.button-list > li > div {
+  padding: 0 10px 0 55px;
+  display: block;
+}
+.button-list > li > div .arrow {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #db4226;
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 22px;
+}
+.accordion-container {
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: #dddddd;
+  border-radius: 4px 4px 0 0;
+  border-width: 1px;
+  box-shadow: none;
+  position: relative;
+}

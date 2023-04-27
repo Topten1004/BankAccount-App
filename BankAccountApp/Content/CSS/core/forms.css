@@ -1,0 +1,647 @@
+/* placeholders on form controls */
+.form-control::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #cccccc !important;
+}
+.form-control:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #cccccc !important;
+  opacity: 1;
+}
+.form-control::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #cccccc !important;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #cccccc !important;
+}
+/* form layouts (anything required for each TYPE of form - widths/etc as well as form elements that aren't bootstrap native) */
+input,
+textarea,
+select {
+  -webkit-appearance: none;
+}
+textarea {
+  resize: vertical;
+}
+input[type="checkbox"] {
+  -webkit-border-radius: 0;
+  border-color: transparent;
+}
+*:focus {
+  outline: 0;
+}
+/* Used to create a simple <ul> of label/value for a vertical form */
+ul.form-group.centered {
+  margin: 0px auto;
+  max-width: 400px;
+}
+ul.form-group {
+  list-style-type: none;
+  padding: 0px;
+}
+ul.form-group > li {
+  padding-bottom: 10px;
+  position: relative;
+}
+ul.form-group.tight > li {
+  padding-bottom: 0px;
+}
+.modal-body > ul.form-group {
+  margin-bottom: 0px;
+}
+ul.form-group > li > h6 {
+  margin-bottom: 7px;
+  margin-top: 14px;
+}
+ul.form-group > li.tight {
+  padding-bottom: 0px;
+}
+ul.form-group > li.section-break > h6 {
+  margin-top: 15px;
+}
+ul.form-group > li > label {
+  display: block;
+}
+ul.form-group > li > input,
+ul.form-group > li > textarea,
+ul.form-group > li > select,
+ul.form-group > li > .select-box,
+ul.form-group > li > .input-container,
+ul.form-group > li > .input-container2,
+ul.form-group > li > .input-container3,
+ul.form-group > li > .input-container4,
+ul.form-group > li > .input-container5,
+ul.form-group > li > .input-container2-3,
+ul.form-group > li > .input-container3-2,
+ul.form-group > li > .bt-select,
+ul.form-group > li > .bt-autocomplete {
+  display: block;
+}
+ul.form-group > li > .input-container,
+ul.form-group > li > .input-container1,
+ul.form-group > li > .input-container2,
+ul.form-group > li > .input-container3,
+ul.form-group > li > .input-container4,
+ul.form-group > li > .input-container5,
+ul.form-group > li > .input-container2-3,
+ul.form-group > li > .input-container3-2 {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+ul.form-group > li.tight > .input-container,
+ul.form-group > li.tight > .input-container1,
+ul.form-group > li.tight > .input-container2,
+ul.form-group > li.tight > .input-container3,
+ul.form-group > li.tight > .input-container4,
+ul.form-group > li.tight > .input-container5,
+ul.form-group > li.tight > .input-container2-3,
+ul.form-group > li.tight > .input-container3-2 {
+  margin-bottom: 5px;
+}
+/* this is a faux input box from a DIV object */
+.input-container.input-border {
+  background-color: #fbf8f7;
+  background-image: none;
+  border: 1px solid #cccccc;
+  color: #443E3D;
+  display: block;
+  font-size: 13px;
+  min-height: 30px;
+  line-height: 1.42857143;
+  padding: 5px 12px;
+  vertical-align: middle;
+  width: 100%;
+  text-overflow: clip;
+  overflow: hidden;
+}
+.input-container.input-border.clipped {
+  max-height: 30px;
+}
+/*ul.form-group>li>.input-container ul li, 
+ul.form-group>li>.input-container2, 
+ul.form-group>li>.input-container3 ul li,
+ul.form-group>li>.input-container2-3 ul li,
+ul.form-group>li>.input-container3-2 ul li {
+	display: inline-block;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-top: 0;
+	vertical-align:top;
+}*/
+ul.form-group > li > .input-container2 > li,
+ul.form-group > li > .input-container3 > li,
+ul.form-group > li > .input-container4 > li,
+ul.form-group > li > .input-container5 > li,
+ul.form-group > li > .input-container2-3 > li,
+ul.form-group > li > .input-container3-2 > li {
+  float: left;
+  position: relative;
+}
+ul.form-group > li > .input-container2 > li:last-child,
+ul.form-group > li > .input-container3 > li:last-child,
+ul.form-group > li > .input-container4 > li:last-child,
+ul.form-group > li > .input-container5 > li:last-child,
+ul.form-group > li > .input-container2-3 > li:last-child,
+ul.form-group > li > .input-container3-2 > li:last-child {
+  margin: 0;
+}
+ul.form-group > li > .input-container2 > li {
+  margin-right: 2%;
+  width: 49%;
+}
+ul.form-group > li > .input-container3 > li {
+  margin-right: 2%;
+  width: 32%;
+}
+ul.form-group > li > .input-container4 > li {
+  margin-right: 2%;
+  width: 24%;
+}
+ul.form-group > li > .input-container4.narrow > li {
+  margin-right: 1%;
+  width: 24%;
+}
+ul.form-group > li > .input-container5 > li {
+  margin-right: 2%;
+  width: 18.4%;
+}
+ul.form-group > li > .input-container2-3 > li {
+  margin-right: 2%;
+  width: 32%;
+}
+ul.form-group > li > .input-container2-3 > li:last-child {
+  width: 66%;
+}
+ul.form-group > li > .input-container3-2 > li {
+  margin-right: 2%;
+  width: 66%;
+}
+ul.form-group > li > .input-container3-2 > li:last-child {
+  width: 32%;
+}
+.inputContainer.c80 > ul > li {
+  width: 75%;
+}
+.inputContainer.c80 > ul > li:last-child {
+  width: 24%;
+}
+.form-group .bt_select_box,
+.form-group .bt_autocomplete_box {
+  display: block;
+  height: 30px;
+  width: 100%;
+}
+ul.form-group .placeholder-label {
+  position: relative;
+}
+ul.form-group .placeholder-label label {
+  left: 13px;
+  margin: 0;
+  position: absolute;
+  top: 25%;
+  z-index: 2;
+}
+ul.form-group .placeholder-label input,
+ul.form-group .placeholder-label select {
+  padding-left: 50px;
+  text-align: right;
+}
+ul.form-group .placeholder-label.short > label {
+  width: 40px;
+}
+ul.form-group .placeholder-label.short > input,
+ul.form-group .placeholder-label.short select {
+  padding-left: 40px;
+}
+ul.form-group .placeholder-label.long > label {
+  width: 45%;
+}
+ul.form-group .placeholder-label.long > input,
+ul.form-group .placeholder-label.long select {
+  padding-left: 45%;
+}
+ul.form-group > li > .input-container > ul > li:not(:first-child).placeholder-label > label,
+ul.form-group > li > .input-container > ul > li:not(:first-child).placeholder-label > label {
+  left: 10px;
+}
+ul.form-group > li > input {
+  display: block;
+}
+ul.form-group li > label {
+  color: #8E8580;
+  font-size: 11px;
+  font-weight: normal;
+  margin-bottom: 5px;
+  margin-left: 12px;
+}
+ul.form-group li > label.toggle-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  color: #4C7998;
+  font-size: 11px;
+  font-weight: normal;
+}
+ul.form-group li > label.auto-number-link {
+  cursor: pointer;
+  color: #4C7998;
+  font-size: 11px;
+  font-weight: normal;
+  margin-left: 0;
+}
+ul.form-group li .label-text {
+  color: #8E8580;
+  font-size: 11px;
+  font-weight: normal;
+}
+li.buttonContainer {
+  text-align: right;
+}
+.form-group li > label.checkbox,
+.form-group li > label.radio {
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 20px;
+  margin-top: 0px;
+  margin-top: 10px;
+  min-height: 0px;
+}
+.form-group li > label.checkbox > input,
+.form-group li > label.radio > input {
+  margin-top: 1px;
+}
+.form-group li > label.checkbox,
+.form-group li > label.radio {
+  color: #443E3D;
+}
+label.checkbox.disabled,
+label.radio.disabled,
+.form-group li > label.checkbox.disabled,
+.form-group li > label.radio.disabled {
+  color: #bbbbbb;
+}
+.form-group li > label.checkbox.multiline,
+.form-group li > label.radio.multiline {
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  min-height: 0px;
+  line-height: 150%;
+  padding-left: 25px;
+}
+.form-group li > label.checkbox.multiline > strong,
+.form-group li > label.radio.multiline > strong {
+  font-weight: normal;
+  font-size: 13px;
+  padding-right: 6px;
+  color: #db4226;
+}
+.form-group li > label.checkbox.multiline > input,
+.form-group li > label.radio.multiline > input {
+  margin-top: -2px;
+  margin-left: -25px;
+}
+.form-group li.checklist > label.checkbox,
+.form-group .checklist > label.checkbox {
+  display: block;
+  margin-left: 13px;
+  margin-top: 5px;
+}
+.form-group li > label.checkbox.tight,
+.form-group li > label.radio.tight {
+  margin: 2px 0px;
+}
+.form-group li > label.streamline {
+  float: left;
+}
+.form-group li > textarea {
+  height: 75px;
+  resize: vertical;
+}
+.form-group li > textarea.lg {
+  height: 125px;
+}
+.form-group li > textarea.sm {
+  height: 48px;
+}
+textarea.small-text {
+  font-size: 11px;
+  min-height: 60px;
+  resize: vertical;
+}
+.bt-file-upload {
+  /*left: -1px;*/
+  border: 1px solid #cccccc;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.bt-file-upload.uploading {
+  border: none;
+  padding: 10px 0;
+}
+.bt-file-upload input {
+  -moz-opacity: 0.01;
+  cursor: pointer;
+  filter: alpha(opacity=1);
+  font-size: 100px;
+  height: 30px;
+  opacity: 0.01;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.bt-file-upload.uploading input {
+  -moz-opacity: 1;
+  filter: alpha(opacity=100);
+  font-size: inherit;
+  left: 0;
+  opacity: 1;
+  top: 5px;
+}
+.bt-file-upload .upload-button {
+  background-color: #cccccc;
+  background-image: url(images/bt-md-sprite.png);
+  background-position: -80px 0;
+  display: inline-block;
+  float: left;
+  height: 30px;
+  width: 30px;
+}
+.bt-file-upload .button {
+  color: #5a5756;
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  height: 30px;
+  line-height: 32px;
+  text-indent: 10px;
+}
+/* TABLES ARE REALLY HARD TO STYLE IN CSS, SO WE USE STRANGE TECHNIQUES */
+table.form-group-table {
+  border-collapse: inherit;
+  border-spacing: 5px;
+  left: -12px;
+  margin-bottom: -10px;
+  margin-top: -20px;
+  position: relative;
+  width: 100%;
+}
+table.form-group-table:last-child {
+  margin-bottom: 0;
+}
+table.form-group-table th {
+  color: #8E8580;
+  font-size: 11px;
+  font-weight: normal;
+  padding-left: 12px;
+  position: relative;
+}
+table.form-group-table tr {
+  /*	display: inline-table;
+	position: relative;
+	width: 100%;
+	
+	This code breaks Expensie Code UOM entry. WHY? FIX IT. :)
+	*/
+}
+table.form-group-table td.empty {
+  visibility: hidden;
+}
+.inputContainer.UnitCost {
+  display: block;
+}
+.inputContainer.UnitCost tr {
+  display: block;
+  width: 100%;
+}
+.inputContainer.UnitCost .input-append .unitTotalCost {
+  display: inline-block;
+  height: 100%;
+  line-height: 15px;
+  padding: 6px;
+}
+.inputContainer.UnitCost .placeholder {
+  position: relative;
+}
+.inputContainer.UnitCost .placeholder label {
+  font-size: 10px;
+  font-weight: normal;
+  padding: 5px;
+  position: absolute;
+}
+.input-append {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.input-append input {
+  float: left;
+  text-align: right;
+  width: 33.3%;
+}
+.input-prepend .add-on,
+.input-append .add-on,
+.input-prepend .btn,
+.input-append .btn {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  margin-left: -1px;
+}
+.input-prepend .add-on,
+.input-append .add-on {
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: normal;
+  height: 30px;
+  line-height: 16px;
+  padding: 6px 10px;
+  text-align: center;
+  text-shadow: 0 1px 0 #ffffff;
+  vertical-align: middle;
+  width: auto;
+}
+.input-append .add-on {
+  border-left: none;
+  border-right: none;
+  margin: 0;
+  text-align: right;
+  width: 33.3%;
+}
+input.amount-highlight {
+  color: #83AF33;
+}
+.double-check-content {
+  min-width: 250px;
+}
+.double-check-content .double-check-input {
+  margin-top: 6px;
+}
+.btn-toolbar.doublecheck {
+  margin-bottom: 0;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: right;
+  width: 100%;
+}
+.btn-toolbar.doublecheck .cancel_btn_sm {
+  background: #7b7675;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  float: left;
+  font-size: 11px;
+  margin: 0;
+  padding: 4px 5px;
+}
+.btn-toolbar.doubleaction .closeAction {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.btn-toolbar.doubleaction .action1 {
+  float: left;
+}
+.selectContainer {
+  background-color: #ffffff;
+  position: relative;
+}
+.selectContainer:after {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #db4226;
+  content: "";
+  cursor: pointer;
+  display: inline-block;
+  height: 0;
+  margin: 12px 2px;
+  position: absolute;
+  right: 9px;
+  top: 0;
+  width: 0;
+  z-index: 1;
+}
+.selectContainer select {
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  padding-left: 8px;
+  padding-right: 32px;
+  position: relative;
+  text-indent: 0.01px;
+  text-overflow: "";
+  width: 100%;
+  z-index: 3;
+}
+.selectContainer select > option {
+  background: #ffffff;
+  cursor: pointer;
+  font-family: inherit;
+  margin: 0px;
+  min-height: 24px;
+  padding: 3px 17px 3px 12px;
+  color: #443E3D;
+}
+.selectContainer.large select {
+  height: 44px;
+}
+/* IE: fix for select's arrow  */
+.selectContainer select::-ms-expand {
+  display: none;
+}
+/* ERROR STUFF */
+.input-validation-error {
+  background-color: #EAAB90 !important;
+  border: 1px solid #ee7039;
+}
+/* a "simple-select" container with an error will show a double line (because both the container AND the select have 
+the input-validation-error class).  So, we need to skip the border on the outer object). */
+.selectContainer.simple-select.input-validation-error {
+  border: 0px;
+}
+.inline-error {
+  color: #db4226;
+  font-size: 11px;
+  margin: 0;
+  text-align: right;
+}
+/* SMALL input (11px and 22px tall) */
+input.form-control.small {
+  font-size: 11px;
+  height: 22px;
+  padding: 2px 12px;
+}
+/* form DIALOG sizes */
+.modal.form-default .modal-dialog {
+  width: 400px;
+}
+.modal.form-narrow .modal-dialog {
+  width: 300px;
+}
+.modal-dialog .confirm-comment {
+  resize: vertical;
+  width: 100%;
+}
+.modal.expense-dialog .modal-dialog {
+  width: 450px;
+}
+.modal.form-default .modal-dialog .modal-body .helpIcon {
+  background: url(images/gallery-sprite.png) no-repeat -106px -56px;
+  display: inline-block;
+  height: 14px;
+  margin-bottom: -3px;
+  margin-left: 5px;
+  width: 13px;
+}
+.modal-body.entry-page {
+  max-height: 600px;
+  overflow-y: auto;
+}
+ul.audit-log-list {
+  list-style-type: none;
+  padding: 0px 12px;
+  font-size: 11px;
+}
+ul.audit-log-list > li {
+  padding-top: 6px;
+}
+/* Placeholders for ERROR cells should be easier to read (original is in bootstrap.css) */
+.input-validation-error.form-control:-moz-placeholder {
+  color: #ffffff !important;
+}
+.input-validation-error.form-control::-moz-placeholder {
+  color: #ffffff !important;
+  opacity: 1;
+}
+.input-validation-error.form-control:-ms-input-placeholder {
+  color: #ffffff !important;
+}
+.input-validation-error.form-control::-webkit-input-placeholder {
+  color: #ffffff !important;
+}
+.modal .footer-warning {
+  margin: 5px;
+  text-align: left;
+  padding: 10px 15px 0 15px;
+  border: 1px solid #f3bc6b;
+}

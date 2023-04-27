@@ -1,0 +1,370 @@
+.data-symbol {
+  font-family: 'work-sans';
+  font-size: 12px;
+  font-weight: normal;
+}
+.data-main {
+  font-family: 'work-sans';
+  font-size: 12px;
+  font-weight: normal;
+}
+em {
+  background-color: #fdf2e1;
+  font-style: normal;
+  padding: 3px;
+}
+em.no-highlight {
+  background-color: inherit;
+  color: #db4226;
+  padding: 0px;
+}
+.small-font {
+  font-size: 11px;
+}
+/* we don't typically include list-style markers in unordered lists */
+ul {
+  list-style: none;
+}
+ol.spaced > li {
+  margin-bottom: 10px;
+}
+/* An extra css class to set an object as "border-box" */
+.border-box {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.cursor-not-allowed {
+  cursor: not-allowed !important;
+}
+/* an easy way to set an object's width to 100% */
+.fullsize {
+  width: 100% !important;
+}
+.fullsize-block {
+  width: 100% !important;
+  display: block !important;
+}
+.full-height {
+  height: 100% !important;
+}
+ul.fullsized {
+  margin: 0;
+  padding: 0;
+}
+.bt-hidden {
+  display: none !important;
+}
+[ng\:cloak],
+[ng-cloak],
+.ng-cloak {
+  display: none !important;
+}
+ul.column-3 li {
+  display: inline-block;
+  margin-top: 10px;
+  padding-right: 10px;
+  position: relative;
+  vertical-align: top;
+  width: 33%;
+}
+.no-top-margin {
+  margin-top: 0px;
+}
+.no-bottom-margin {
+  margin-bottom: 0px;
+}
+/* useful for alert boxes that appear in headers, footers and forms. */
+.alert.no-margin {
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+}
+.alert.alert-500 {
+  margin: 10px auto;
+  max-width: 500px;
+}
+/* common css-related formatting (padding, nowrap, clear, break) */
+.nowrap {
+  white-space: nowrap;
+}
+.bt-break {
+  clear: both;
+  display: block;
+  padding-top: 15px;
+}
+div.clear {
+  clear: both;
+}
+.bt-padded {
+  padding: 6px;
+}
+.bt-padded-small {
+  padding: 3px;
+}
+.bt-padded-large {
+  padding: 24px;
+}
+.centered {
+  text-align: center !important;
+}
+.unselectable,
+.unselectable * {
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+a.naked {
+  color: #4C7998;
+}
+a.naked:visited {
+  color: #4C7998;
+}
+a.naked:hover {
+  color: #ee7039;
+  text-decoration: underline;
+}
+a.highlight,
+a.highlight:visited {
+  color: #db4226;
+}
+a.highlight:hover,
+a.highlight:focus {
+  border-bottom: 1px solid #db4226;
+  color: #db4226;
+  text-decoration: none;
+}
+a.white {
+  color: white;
+  text-decoration: underline;
+}
+a.white:hover,
+a.white:focus {
+  color: #fbf8f7;
+  text-decoration: underline;
+}
+.caret.right-side {
+  margin-left: 12px;
+}
+.caret.left-side {
+  margin-right: 12px;
+}
+.clickable {
+  cursor: pointer;
+}
+.heading-light {
+  font-family: 'work-sans';
+  font-size: 11px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+/* used because all top toolbars should have 12px spacing from content */
+.toolbar {
+  margin-bottom: 12px;
+}
+/* when a checkbox is contained inside of a toolbar div, the top/bottom margin should be set to 0 */
+.checkbox.toolbar {
+  display: inline-block;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+/* When a complex project "display name" contains a ":" character -- the grid object breaks it up.  These styles help display dname columns */
+.bttd .dname {
+  display: line-block;
+}
+.bttd .dname > .prjPart {
+  color: inherit;
+  line-height: 100%;
+}
+.bttd .dname > .fullname {
+  color: inherit;
+  font-size: 11px;
+  line-height: 100%;
+  margin-bottom: 0;
+  margin-top: 3px;
+  opacity: 0.7;
+}
+/* DATA PAGER control */
+.page-size {
+  display: none;
+}
+.paging-parent {
+  background: #F4EFEC;
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  height: 45px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 13px;
+}
+.paging-parent .page-number {
+  font-size: 11px;
+  text-align: right;
+  text-transform: uppercase;
+}
+.paging-parent .page-number .sz-label {
+  display: none;
+}
+.paging-parent .page-number .sz-button,
+.paging-parent .page-number .page-numbers {
+  cursor: pointer;
+  display: inline-block;
+}
+.paging-parent .page-number .js-previous {
+  margin-right: 10px;
+}
+.paging-parent .page-number .js-next {
+  margin-left: 10px;
+}
+.paging-parent .page-number .page-numbers .sz-pagenbr {
+  display: inline-block;
+  height: 14px;
+  margin: 0 3px;
+  text-align: center;
+  width: 14px;
+}
+.paging-parent .page-number .page-numbers .active {
+  background: #db4226;
+  color: #ffffff;
+}
+.paging-parent,
+.paging-parent * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.paged-table-wrapper {
+  overflow-y: auto;
+  border-right: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+}
+.paged-table-wrapper > .table {
+  margin-bottom: 0px;
+}
+.paged-table-wrapper > .table > thead > tr > th:first-child,
+.paged-table-wrapper > .table > tbody > tr > td:first-child {
+  border-left: 0px !important;
+}
+.paged-table-wrapper > .table > thead > tr > th:last-child,
+.paged-table-wrapper > .table > tbody > tr > td:last-child {
+  border-right: 0px !important;
+}
+.paged-table-wrapper > .table {
+  border-left: 0px !important;
+  border-right: 0px !important;
+}
+.alert.fixed-top-footer {
+  margin-bottom: 0px;
+}
+/* FIXED TOP divs have a header with a fixed height but allow the content to expand to 100%:
+	 structure <div class="fixed-top"><div class="fixed-top-header" /><otherEl class="fixed-top-body" /></div>
+
+	  NOTE THAT WE USE FLEX-MODEL (CSS3) TO ACCOMPLISH THIS, SO SET A MIN-HEIGHT ON YOUR BODY TO DEGRADE GRACEFULLY
+
+*/
+.fixed-top {
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.fixed-panel {
+  -webkit-flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.fixed-top-header,
+.fixed-top-footer,
+.fixed-panel-static {
+  -ms-flex: none;
+  -webkit-box-flex: none;
+  -webkit-flex: none;
+  flex: none;
+}
+.fixed-top-body,
+.fixed-panel-flex {
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.fixed-top-body {
+  min-height: 1px;
+}
+.fixed-top-body.scrollable {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* FLEX MODEL BASED TOOLBAR:  2 divs:  first is left aligned, second is right aligned. */
+.flex-toolbar {
+  -webkit-box-pack: justify;
+  -webkit-flex-direction: row;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.inline-flex-center {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+.align-center {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.flex-justify-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/* Chrome, Safari */
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-thumb:vertical {
+  background-color: #A59494;
+}
+.main-content-error {
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.img-center > img {
+  width: 80%;
+  margin: 10px;
+}
+.img-center {
+  text-align: center;
+}

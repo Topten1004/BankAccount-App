@@ -1,0 +1,19 @@
+﻿
+@{
+	//   ViewBag.Title = "Index";
+	//   Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@section additionalCss {
+
+}
+@section additionalScripts {
+	<script type="text/javascript" src="@Url.Content("~/Content/Js/BTApp/_app.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/Content/Js/BTApp/_routes.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/Content/Js/BTApp/WelcomeController.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/Content/Js/BTApp/TestController.js")"></script>
+
+}
+
+<div ng-app="MainApp" class="main-app fixed-top">
+	<div class="fixed-top-body" ng-view=""></div>
+</div>

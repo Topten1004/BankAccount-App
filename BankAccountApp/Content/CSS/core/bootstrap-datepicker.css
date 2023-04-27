@@ -1,0 +1,221 @@
+/*
+	bootdate for Bootstrap
+	Copyright 2012 Stefan Petre
+	Licensed under the Apache License v2.0
+	http://www.apache.org/licenses/LICENSE-2.0
+*/
+.bootdate {
+  top: 0;
+  left: 0;
+  margin-top: 1px;
+  /*.dow { border-top: 1px solid @border-grey !important; }*/
+}
+.bootdate.dropdown-menu {
+  z-index: 1050;
+  background-color: #443E3D;
+  border: 1px solid #dddddd;
+}
+.bootdate:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #443E3D;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: -7px;
+  left: 6px;
+}
+.bootdate:after {
+  content: '';
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #443E3D;
+  position: absolute;
+  top: -6px;
+  left: 7px;
+}
+.bootdate > div {
+  display: none;
+}
+.bootdate table {
+  width: 100%;
+  margin: 0;
+}
+.bootdate td,
+.bootdate th {
+  font-size: 13px;
+  font-weight: normal;
+  text-align: center;
+  width: 13px;
+  height: 13px;
+  padding: 2px 3px;
+}
+.bootdate td.day:hover {
+  background: #db4226;
+  color: #ffffff;
+  cursor: pointer;
+}
+.bootdate td.old,
+.bootdate td.new {
+  color: #a4a2a1;
+}
+.bootdate td.active,
+.bootdate td.active:hover {
+  background-color: #db4226;
+}
+.bootdate td.active:hover,
+.bootdate td.active:hover:hover,
+.bootdate td.active:active,
+.bootdate td.active:hover:active,
+.bootdate td.active.active,
+.bootdate td.active:hover.active,
+.bootdate td.active.disabled,
+.bootdate td.active:hover.disabled,
+.bootdate td.active[disabled],
+.bootdate td.active:hover[disabled] {
+  background-color: #db4226;
+  color: #ffffff;
+}
+.bootdate td.active:active,
+.bootdate td.active:hover:active,
+.bootdate td.active.active,
+.bootdate td.active:hover.active {
+  background-color: #4C7998 \9;
+}
+.bootdate td span {
+  display: block;
+  width: 40px;
+  height: 35px;
+  line-height: 35px;
+  float: left;
+  margin: 2px;
+  cursor: pointer;
+}
+.bootdate td span.month {
+  width: 51px;
+}
+.bootdate td span.year {
+  width: 42px;
+}
+.bootdate td span:hover {
+  background: #db4226;
+  color: #ffffff;
+}
+.bootdate td span.active {
+  background-color: #db4226;
+  color: #ffffff;
+}
+.bootdate td span.active:hover,
+.bootdate td span.active:active,
+.bootdate td span.active.active,
+.bootdate td span.active.disabled,
+.bootdate td span.active[disabled] {
+  background-color: #db4226;
+}
+.bootdate td span.active:active,
+.bootdate td span.active.active {
+  background-color: #4C7998 \9;
+}
+.bootdate td span.old {
+  color: #a4a2a1;
+}
+.bootdate th.dow {
+  border-top: 1px solid #443E3D;
+}
+.bootdate th.switch {
+  width: 145px;
+}
+.bootdate th.next,
+.bootdate th.prev {
+  font-size: 19.5px;
+}
+.bootdate thead,
+.bootdate td {
+  color: #ffffff;
+}
+.bootdate thead tr:first-child th {
+  cursor: pointer;
+}
+.bootdate thead tr:first-child th:hover {
+  background: #db4226;
+  color: #ffffff;
+}
+.bootdate thead tr:first-child {
+  border-bottom: 1px solid #443E3D;
+  border-bottom: 1px solid #696564;
+}
+.bootdate thead tr:last-child {
+  background-color: #443E3D;
+  border-top: 1px solid #696564;
+  border-bottom: 1px solid #696564;
+  color: #a4a2a1;
+}
+.input-append.date .add-on i,
+.input-prepend.date .add-on i {
+  display: block;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+div.datePickerFloating {
+  position: absolute;
+  z-index: 2010;
+  width: 450px;
+  background-color: #696564;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px;
+  padding-bottom: 40px;
+}
+div.datePickerFloating > .title {
+  font-family: 'work-sans';
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 10px;
+  text-align: center;
+  color: #ffffff;
+}
+div.datePickerFloating > ul {
+  padding-left: 0px;
+  margin-bottom: 2px;
+}
+div.datePickerFloating .form-control {
+  margin-bottom: 3px;
+  background: #5a5756;
+  border: 1px solid #7b7675;
+  color: #ffffff;
+}
+div.datePickerFloating .ContainerButtons {
+  position: absolute;
+  bottom: 8px;
+  left: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  -mox-box-sizing: border-box;
+  padding: 0px 20px;
+}
+div.datePickerFloating .ContainerButtons .btn-default {
+  float: left;
+  background: #99918f;
+}
+div.datePickerFloating .ContainerButtons .secondary {
+  float: right;
+}
+div.datePickerFloating ul li {
+  display: inline-block;
+  padding: 1%;
+  width: 47%;
+  padding-left: 20px;
+}
+div.datePickerFloating ul li > input {
+  width: 100%;
+}
+div.datePickerFloating .datepicker_wrapper {
+  width: 160px;
+}
+div.datePickerFloating .single_picker .date_picker {
+  margin-top: 8px;
+}

@@ -1,0 +1,332 @@
+.bt_select_box.select_sm {
+  height: 24px;
+}
+.bt_select_box.select_sm .btn_select:before {
+  margin: 10px 7px;
+}
+.bt_select_box.select_sm .text_input {
+  font-size: 11px;
+}
+.bt_select_box.bt-select-large {
+  height: 44px;
+}
+.bt_select_box.bt-select-large .btn_select:before {
+  margin: 19px 17px;
+}
+.bt_select_box.bt-select-large .input_wrap {
+  padding-right: 44px;
+}
+.bt_select_box.bt-select-large .btn_select {
+  width: 52px;
+}
+.bt_select_box.bt-select-large .text_input {
+  padding-left: 20px;
+}
+/* Basic combo box settings */
+.bt_select_box {
+  color: #443E3D;
+  display: inline-block;
+  height: 30px;
+  min-width: 50px;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+}
+.bt_select_box.staff-select {
+  height: 29px;
+}
+.bt_select_box > ul,
+.bt_select_box a,
+.bt_select_box .text_input {
+  color: #443E3D;
+  height: 100%;
+}
+.bt_select_box .input_wrap {
+  -moz-box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  height: 100%;
+  padding-right: 32px;
+  position: absolute;
+  width: 100%;
+}
+.bt_select_box.staff-select .input_wrap {
+  background: transparent !important;
+  border: none !important;
+}
+.bt_select_box.form-control .input_wrap {
+  border: none;
+  left: 0;
+  top: 0;
+}
+.bt_select_box.open .input_wrap {
+  border-color: #cccccc;
+}
+.bt_select_box .btn_select {
+  outline: 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.bt_select_box .text_input {
+  -moz-box-sizing: border-box;
+  border: 0px;
+  box-sizing: border-box;
+  display: block;
+  font-family: inherit;
+  font-size: 13px;
+  padding-left: 12px;
+  position: relative;
+  width: 100%;
+  z-index: 20;
+}
+.bt_select_box.staff-select .text_input {
+  background: transparent !important;
+}
+.bt_select_box ul {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  height: 0px;
+  /* hides the UL overflow when the select box is first initialized */
+  line-height: 140%;
+  list-style: none;
+  margin: 0px;
+  min-width: 100%;
+  overflow: hidden;
+  padding: 0px;
+  width: auto;
+  z-index: 10;
+}
+.bt_select_box > ul {
+  background-color: White;
+  position: absolute;
+}
+.bt_select_box > ul.nowrap li,
+.bt_select_box > ul.nowrap span {
+  white-space: nowrap;
+}
+.bt_select_box.dropup > ul {
+  bottom: 0px;
+}
+.bt_select_box .group ul {
+  border-width: 0px;
+  height: 100%;
+  margin: 0px;
+  top: 0px;
+}
+.bt_select_box.open,
+.bt_select_box.focus,
+.bt_select_box.open .btn_select,
+.bt_select_box.focus .btn_select,
+.bt_select_box.open .text_input,
+.bt_select_box .text_input:focus {
+  border-color: #cccccc;
+}
+.bt_select_box.open > ul {
+  border: solid 1px #cccccc;
+  height: auto;
+  left: 0;
+  overflow-y: visible;
+}
+.bt_select_box.open input.text_input {
+  border-bottom: 0px;
+}
+.bt_select_box.open > ul ul {
+  height: auto;
+}
+.bt_select_box > ul > li {
+  background: #ffffff;
+  cursor: pointer;
+  font-family: inherit;
+  margin: 0px;
+  min-height: 24px;
+  padding: 3px 17px 3px 12px;
+}
+.bt_select_box ul li {
+  font-size: 12px;
+  margin: 0px;
+}
+.bt_select_box ul li.option:hover,
+.bt_select_box.open ul li.option.selected:hover {
+  background: #fdf2e1;
+}
+.bt_select_box.open ul li.selected {
+  background: #F8D7A6;
+}
+.bt_select_box ul li.inactive {
+  color: #cccccc;
+}
+.bt_select_box ul li.option.inactive:hover,
+.bt_select_box.open ul li.option.selected.inactive:hover {
+  background: #ffffff;
+}
+.bt_select_box ul li.group:hover {
+  background: #ffffff;
+}
+.bt_select_box ul li.filtered {
+  display: none;
+}
+/* tiers 1-4 */
+.bt_select_box ul > li.group,
+.bt_select_box .group ul > li.group,
+.bt_select_box .group .group ul > li.group,
+.bt_select_box .group .group .group ul > li.group {
+  cursor: default;
+  padding: 0px;
+}
+.bt_select_box li,
+.bt_select_box .span {
+  display: block;
+}
+.bt_select_box .group > ul > li,
+.bt_select_box li.group > span {
+  padding: 1px 17px 1px 3px;
+  width: auto;
+}
+.bt_select_box li.group > span {
+  display: block;
+  color: #83AF33;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+/* group tier 1 */
+.bt_select_box li.group > ul > li,
+.bt_select_box .group li.group > span {
+  padding-left: 15px;
+}
+/* group tier 2 */
+.bt_select_box .group li.group > ul > li,
+.bt_select_box .group .group li.group > span {
+  padding-left: 25px;
+}
+/* group tier 3 */
+.bt_select_box .group .group li.group > ul > li,
+.bt_select_box .group .group .group li.group > span {
+  padding-left: 25px;
+}
+/* group tier 4 */
+.bt_select_box .group .group .group li.group > ul > li,
+.bt_select_box .group .group .group .group li.group > span {
+  padding-left: 25px;
+}
+.bt_select_box .btn_select {
+  -moz-box-sizing: border-box;
+  border-left: 0px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  padding-left: 8px;
+  position: absolute;
+  right: 0px;
+  width: 33px;
+  z-index: 50;
+}
+.bt_select_box .btn_select:before {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #db4226;
+  content: "";
+  display: inline-block;
+  height: 0;
+  margin: 12px 5px;
+  width: 0;
+}
+.bt_select_box .btn_select:hover {
+  background-position: -25px 0px;
+}
+/* "Edit These Values" li/a tag at the bottom of the select list */
+.bt-select li.editor-link {
+  background-color: #696564;
+  margin-top: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.bt-select li.editor-link > a {
+  color: White;
+}
+.bt_select_box ul li.editor-link:hover {
+  background-color: #696564;
+}
+.bt_select_box ul li.editor-link:hover > a {
+  text-decoration: underline;
+}
+/* when a select box is open, make sure that the elements in the pick list are a higher z-index to avoid other boxes blocking the picklist */
+.bt_select_box.open {
+  z-index: 5;
+}
+/* If a bt_select_box element has a validation error, adjust borders/backgrounds */
+.bt_select_box.input-validation-error > .input_wrap,
+.bt_select_box.disabled > .input_wrap {
+  background: transparent;
+}
+.bt_select_box.input-validation-error > .input_wrap > input,
+.bt_select_box.disabled > .input_wrap > input {
+  background-color: transparent;
+}
+.bt_select_box.disabled {
+  background-color: #eeeeee;
+  cursor: not-allowed;
+}
+.bt_checkbox_warning {
+  height: 16px;
+  width: 16px;
+  float: left;
+  margin-left: -20px;
+  background-color: #EAAB90;
+  border: 1px solid #ee7039;
+}
+.bt_select_box.disabled .btn_select:before {
+  border-top: 6px solid #d5beb3;
+}
+.bt_select_box.bt-multiselect .selected-options .selected-option {
+  background: #F7F2F0;
+  border: 1px solid #e3d9d5;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 20px;
+  margin: 2px 3px 2px 3px;
+  padding: 1px 6px 0 6px;
+  white-space: nowrap;
+}
+.bt_select_box.bt-multiselect .selected-options .selected-option.inactive {
+  background-color: #fbf8f7;
+  color: #cccccc;
+}
+.bt_select_box.bt-multiselect .selected-options .selected-option .icon-close-gry {
+  cursor: pointer;
+  vertical-align: middle;
+}
+.bt_select_box.bt-multiselect .input_wrap {
+  height: auto;
+  min-height: 30px;
+  position: relative;
+}
+.bt_select_box.bt-multiselect .btn_select {
+  align-items: center;
+  display: flex;
+}
+.bt_select_box .btn_select:focus {
+  -webkit-box-shadow: inset 0px 0px 2px 2px rgba(204, 204, 204, 0.7);
+  -moz-box-shadow: inset 0px 0px 2px 2px rgba(204, 204, 204, 0.7);
+  box-shadow: inset 0px 0px 2px 2px rgba(204, 204, 204, 0.7);
+}
+.bt_select_box.bt-multiselect .options input[type="checkbox"] {
+  margin-right: 10px;
+}
+.bt_select_box.bt-multiselect.open .filter {
+  margin: 5px 0;
+}
+.bt_select_box.bt-multiselect.open input.text_input {
+  border: solid 1px #cccccc;
+  font-size: inherit;
+}
+.bt_select_box.bt-multiselect {
+  height: inherit;
+}
+.bt-suggest-link {
+  text-align: right;
+}

@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'muli';
+  src: url('fonts/muli/muli-regular-webfont.eot');
+  src: url('fonts/muli/muli-regular-webfont.eot') format('embedded-opentype'), url('fonts/muli/muli-regular-webfont.ttf') format('truetype'), url('fonts/muli/muli-regular-webfont.svg#muliregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'muli';
+  src: url('fonts/muli/muli-regular-webfont.eot');
+  src: url('fonts/muli/muli-regular-webfont.eot') format('embedded-opentype'), url('fonts/muli/muli-regular-webfont.ttf') format('truetype'), url('fonts/muli/muli-regular-webfont.svg#muliitalic') format('svg');
+  font-weight: italic;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'work-sans';
+  src: url('fonts/worksans/WorkSans-Regular.eot');
+  src: url('fonts/worksans/WorkSans-Regular.eot') format('embedded-opentype'), url('fonts/worksans/WorkSans-Regular.ttf') format('truetype'), url('fonts/worksans/WorkSans-Regular.svg#work_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'work-sans';
+  src: url('fonts/worksans/WorkSans-ExtraBold.eot');
+  src: url('fonts/worksans/WorkSans-ExtraBold.eot') format('embedded-opentype'), url('fonts/worksans/WorkSans-ExtraBold.ttf') format('truetype'), url('fonts/worksans/WorkSans-ExtraBold.svg#work_sansextrabold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'syncopate';
+  src: url('fonts/syncopate/syncopate-regular-webfont.eot');
+  src: url('fonts/syncopate/syncopate-regular-webfont.eot') format('embedded-opentype'), url('fonts/syncopate/syncopate-regular-webfont.ttf') format('truetype'), url('fonts/syncopate/syncopate-regular-webfont.svg#syncopateregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'syncopate';
+  src: url('fonts/worksans/syncopate-bold-webfont.eot');
+  src: url('fonts/worksans/syncopate-bold-webfont.eot') format('embedded-opentype'), url('fonts/worksans/syncopate-bold-webfont.ttf') format('truetype'), url('fonts/worksans/syncopate-bold-webfont.svg#syncopatebold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'oswald-light';
+  src: url('fonts/oswald/oswald-light-webfont.eot');
+  src: url('fonts/oswald/oswald-light-webfont.eot') format('embedded-opentype'), url('fonts/oswald/oswald-light-webfont.ttf') format('truetype'), url('fonts/oswald/oswald-light-webfont.svg#oswaldregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'oswald';
+  src: url('fonts/oswald/oswald-regular-webfont.eot');
+  src: url('fonts/oswald/oswald-regular-webfont.eot') format('embedded-opentype'), url('fonts/oswald/oswald-regular-webfont.ttf') format('truetype'), url('fonts/oswald/oswald-regular-webfont.svg#oswaldregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'oswald';
+  src: url('fonts/oswald/oswald-bold-webfont.eot');
+  src: url('fonts/oswald/oswald-bold-webfont.eot') format('embedded-opentype'), url('fonts/oswald/oswald-bold-webfont.ttf') format('truetype'), url('fonts/oswald/oswald-bold-webfont.svg#oswaldbold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+.table.small-font thead th,
+.table.small-font td {
+  font-size: 11px;
+  line-height: 16px;
+}

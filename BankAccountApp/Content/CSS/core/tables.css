@@ -1,0 +1,1192 @@
+/* css for the div-based BT tables (regular tables are already styled within bootstrap.js) */
+/* GridCanvas (viewport) */
+.btt-canvas {
+  background: #F4EFEC;
+  min-width: 100%;
+  outline: 0;
+  position: relative;
+}
+.btt-canvas-vertical {
+  -webkit-overflow-scrolling: touch;
+  background: #F4EFEC;
+  border: solid 1px #DAD8D8;
+  border-top: none;
+  outline: 0px;
+  overflow: auto;
+  position: relative;
+  width: auto;
+}
+.btt-table_wrap {
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  min-width: 650px;
+  width: 100%;
+}
+.btt-table_body {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.btt-table_wrap .footer_toolbar.tsFooter_toolbar {
+  background-color: #FCEBA1;
+  height: 35px;
+  left: 0px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.btt-table_wrap .footer_toolbar {
+  background: #eeeeee;
+  border-top: 1px solid #dddddd;
+  padding: 0;
+}
+.btt-table_wrap > .header_toolbar,
+.btt-table_wrap > .footer_toolbar {
+  position: absolute;
+}
+.btt-table_wrap .header_toolbar {
+  display: inline-block;
+  min-height: 30px;
+}
+.btt-table_wrap .footer_toolbar {
+  background: #eeeeee;
+  border-top: 1px solid #dddddd;
+  bottom: 0;
+  margin: 0px;
+  padding: 0;
+}
+/* border-box the resizable elements */
+.btthead,
+.bttd,
+.bttr,
+.btt-canvas,
+btt-canvas-vertical {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* column headers, super-heads */
+.btthead-row {
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.btthead-row {
+  background: #F4EFEC;
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
+  cursor: default;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  width: 999999px;
+}
+.btthead-row .tooltip-inner {
+  white-space: normal;
+}
+/*
+.btthead-row * {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+*/
+.btthead {
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background: #F4EFEC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 14px;
+  margin: 0;
+  min-height: 51px;
+  overflow: visible;
+  padding: 0 12px;
+  position: relative;
+  text-overflow: ellipsis;
+}
+.btthead,
+.btthead-super {
+  background-color: #ebebeb;
+  color: #443E3D;
+}
+.btthead-row .btthead {
+  background-color: #F4EFEC;
+  border: 0px;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #DAD8D8;
+}
+.btthead:first-child {
+  border-left: 1px solid #eeeeee;
+}
+.btthead-row > .btthead:nth-last-child(2) {
+  border-right: 0px;
+}
+.btthead,
+.btthead-super,
+.btthead-end {
+  background-color: #F4EFEC;
+  background-image: none;
+  color: #443E3D;
+  text-transform: uppercase;
+}
+.btthead:hover,
+.btthead-active {
+  background-color: #a4a2a1;
+  background-image: none;
+  color: white;
+  cursor: pointer;
+}
+div.btthead button.btrgrid-filter {
+  -mox-box-shadow: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -webkit-box-shadow: none;
+  background: #eeeeee;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjkzNDRGN0ZGNzM1RTExRTE4NkM4ODVEMTdGN0QyRjQyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjkzNDRGODAwNzM1RTExRTE4NkM4ODVEMTdGN0QyRjQyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTM0NEY3RkQ3MzVFMTFFMTg2Qzg4NUQxN0Y3RDJGNDIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OTM0NEY3RkU3MzVFMTFFMTg2Qzg4NUQxN0Y3RDJGNDIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz65yIP5AAAAFVBMVEVoaGhpaWlnZ2dlZWVmZmZkZGT///8SLO/QAAAAB3RSTlP///////8AGksDRgAAAB9JREFUeNpiYGJgZmJkYGNgZmRjYIMiFjDJysYGEGAABQAAagH57CYAAAAASUVORK5CYII%3D);
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: solid 1px #bbbbbb;
+  border-radius: 3px;
+  bottom: 2px;
+  box-shadow: none;
+  display: none;
+  float: right;
+  height: 15px;
+  margin: 0px;
+  margin-left: 5px;
+  padding: 0px;
+  padding-top: 2px;
+  position: absolute;
+  right: 3px;
+  width: 18px;
+}
+div.btthead button:hover {
+  border: 1px solid #006699;
+  cursor: pointer;
+}
+.bttr.header {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -webkit-box-sizing: border-box;
+  align-items: center;
+  border-bottom: 1px solid #cccccc;
+  border-right: 0px;
+  box-sizing: border-box;
+  color: #83AF33;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  font-size: 15px;
+  padding-left: 12px;
+  text-transform: uppercase;
+  width: 100%;
+}
+.bttr.header .length {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #a4a2a1;
+}
+.bttr.header .length:before {
+  content: '(';
+}
+.bttr.header .length:after {
+  content: ')';
+}
+.btthead-end {
+  display: none;
+}
+.btthead-wrapper {
+  background: transparent;
+  border: 0px;
+  border-left: solid 1px #DAD8D8;
+  border-right: solid 1px #DAD8D8;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+.bttfoot-wrapper {
+  background: transparent;
+  border: 0px;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+.bttfoot-wrapper > .bttr {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  width: 999999px;
+}
+.missing-superhead {
+  padding-top: 21px !important;
+}
+.btthead-super {
+  border: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin: 0px;
+  max-height: 52px;
+  padding: 0px;
+  position: relative;
+}
+.btthead-super > .label {
+  font-family: 'work-sans';
+  font-size: 11px;
+  font-weight: normal;
+  background: transparent;
+  border: 0px;
+  border-bottom: 1px solid #cccccc;
+  border-radius: 0px;
+  border-right: 1px solid #DAD8D8;
+  color: #443E3D;
+  height: 22px;
+  left: 0px;
+  line-height: 17px;
+  overflow: hidden;
+  padding-left: 12px;
+  padding-right: 12px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+}
+.btthead-super > .btthead {
+  margin-top: 22px;
+  min-height: 1px;
+  padding-bottom: 7px;
+  padding-top: 10px;
+}
+.btthead-super > .btthead > .column-name {
+  font-family: 'work-sans';
+  font-size: 9px;
+  font-weight: normal;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.btthead > .column-name {
+  font-family: 'work-sans';
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 140%;
+  white-space: normal;
+  width: 100%;
+}
+.btthead > .column-name.right {
+  float: none;
+}
+/* sorting asc/desc indicators */
+.btthead > .sort-indicator,
+.table thead th .sort-indicator {
+  border-bottom: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid #db4226;
+  display: inline-block;
+  margin: 0;
+}
+.btthead > .sort-indicator.desc,
+.table thead th .sort-indicator.desc {
+  border-bottom: 6px solid #db4226;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 0px;
+}
+.btthead:hover > .sort-indicator,
+.table thead th:hover .sort-indicator {
+  border-bottom-color: white;
+  border-top-color: white;
+}
+/* Header column resizers */
+.resizable-handle {
+  cursor: col-resize;
+  display: block;
+  font-size: 0.1px;
+  height: 100%;
+  position: absolute;
+  right: -2px;
+  top: 0;
+  width: 8px;
+}
+/* table ROWS (body) */
+.bttr {
+  background: #fbf8f7;
+  border: 0px;
+  border-bottom: 1px solid #DAD8D8;
+  min-width: 100%;
+  position: absolute;
+}
+.bttr.selected {
+  background: #e3d9d5;
+  font-weight: normal;
+}
+.bttr.selected .bttd:before {
+  display: none;
+}
+.bttr.selected .cell-selection {
+  background-color: transparent;
+}
+.bttr.active,
+.bttr:nth-child(2n + 1).active {
+  background: #e3d9d5;
+}
+.bttr.highlights {
+  background: #fbf8f7;
+}
+.bttr.highlights.selectHighlight {
+  border: solid #ea492a;
+  border-width: 1px 0 1px 0;
+}
+.bttr.loading {
+  -ms-filter: alpha(opacity=50);
+  -ms-opacity: 0.5;
+}
+.bttable-alt .bttr:nth-child(2n + 1) {
+  background: #fbf8f7;
+}
+.bttr .show-selected-only {
+  display: none;
+}
+.bttr.selected .show-selected-only {
+  display: inline-block;
+  margin: 0px 5px;
+}
+/* table CELLS */
+.bttd.invalid {
+  border-color: red;
+}
+.bttd {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  border-right: solid 1px #DAD8D8;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  height: 100%;
+  overflow: hidden;
+  padding: 5px 12px;
+  position: relative;
+  vertical-align: middle;
+  /* text-overflow: ellipsis; causes names to disappear in FF */
+  white-space: nowrap;
+}
+.bttd .tooltip-inner {
+  white-space: normal;
+}
+/* added to combat bootstrap which hides empty labels */
+.bttd.label {
+  display: inline-flex !important;
+  text-align: left;
+}
+.bttd.clickable,
+.bttd.clickable a {
+  color: #4C7998;
+}
+.bttd.clickable:hover,
+.bttd.clickable:hover a {
+  color: #ee7039;
+  cursor: pointer;
+  text-decoration: underline;
+}
+/* css added to allow text to wrap for autogrow tables (eg tables with notes that grow the row height dynamically) */
+.btt-canvas.autogrow .bttd {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  padding-top: 10px;
+}
+.btt-canvas.autogrow .bttd.multi-line {
+  min-height: 100%;
+  padding-top: 0px;
+}
+/* Multiline grids (eg - auto-expanding) */
+.btt-canvas.autogrow .dname * {
+  white-space: normal;
+}
+.btt-canvas.autogrow .bttd {
+  /*white-space: normal;*/
+}
+.bttd-multiline {
+  font-size: 11px;
+  line-height: 140%;
+  margin: 0px;
+  padding: 9px 0px 6px 0px;
+  max-height: 100px;
+  overflow: hidden;
+  white-space: normal;
+}
+.full-notes .btt-canvas .bttd-multiline,
+.bttd-multiline.full-notes {
+  max-height: none;
+}
+.bttd::before {
+  border-top: solid 1px #ffffff;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 1px;
+}
+.bttd.editable {
+  overflow: visible;
+  z-index: 2;
+  /*background: white;
+	border-color: black;
+	border-style: solid;*/
+}
+.bttd:focus {
+  outline: none;
+}
+.bttd:last-child {
+  border-right: 0px;
+}
+.bttd.cell-right {
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  text-align: right;
+}
+.bttd.cell-center {
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+}
+/* Total rows (sub-totals + overall totals) */
+.bttd.total-97 {
+  background-color: transparent;
+  color: #8E8580;
+  font-weight: normal;
+  overflow: hidden;
+  border-right: 0px;
+}
+.bttr.total-98 {
+  background: #F4EFEC;
+}
+.bttd.total-98 {
+  color: #696564;
+  font-weight: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0px;
+}
+.bttd.total-99 {
+  color: #83AF33;
+  font-weight: normal;
+  overflow: hidden;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-right: 0px;
+}
+.bttd.total-99.label,
+.bttd.total-98.label,
+.bttd.total-97.label {
+  border: 0px;
+  overflow: visible;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: 90%;
+  /* overcome "small" label within the total blocks */
+}
+.bttd.total-99.label .dname * {
+  color: #83AF33;
+  white-space: nowrap;
+}
+/* adding background color to total rows in case the label runs PAST it's border */
+.bttd.total-99.total-value,
+.bttd.total-97.total-value {
+  background: #fbf8f7;
+}
+.bttd.total-98.total-value {
+  background: #F4EFEC;
+}
+.bttd.total-100:before {
+  display: none;
+}
+.bttd.total-100 {
+  border-left: 0px;
+  border-right: 0px;
+  color: white;
+  font-weight: normal;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.bttd.total-100.label {
+  background-color: transparent;
+  border: 0px;
+  color: white;
+  font-size: inherit;
+  overflow: visible;
+  text-shadow: none;
+}
+.bttr.total-100,
+bttr.total-100:nth-child(2n + 1) {
+  background: #696564;
+  border-bottom: 0px;
+  border-top: none;
+}
+/* If a column has a footnote, we store those notes in a footer-item div */
+div.btrgrid-footer-item {
+  clear: none;
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 2px;
+}
+/* when a checkbox is added to the first column of a grid (checkboxColumn property), this is the style applied to that input element */
+.bttd input.checkbox,
+.bttd input[type="checkbox"],
+.bttd input.checkbox,
+.btthead input[type="checkbox"] {
+  margin-bottom: 0px;
+  margin-left: 0;
+  margin-right: 5px;
+  margin-top: 0;
+  vertical-align: bottom;
+}
+.bttd input.checkbox,
+.btthead input[type="checkbox"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* BOOTSTRAP BADGE MODS */
+.bttd .badge {
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 0;
+  padding: 5px 15px;
+  position: relative;
+  top: -1px;
+}
+/* Need this exception for grids that contain multi-line text fields (can't rely on line-height for positioning)*/
+.btt-canvas.autogrow .bttd .badge {
+  top: 1px;
+}
+.btthead .btn-filter {
+  background: transparent;
+  border: 0px;
+  display: none;
+  height: 12px;
+  padding: 0px;
+  width: 21px;
+}
+.btthead.tableColumnTimer .btn-filter {
+  display: none !important;
+}
+.btthead .btn-filter:hover {
+  border: 0px;
+}
+.bt-filter_wrapper {
+  -moz-border-radius: 2px;
+  -moz-box-shadow: 0px 5px 10px -5px #000000;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 5px 10px -5px #000000;
+  background: #fbf8f7;
+  border: 1px solid #cccccc;
+  border-image: initial;
+  border-radius: 2px;
+  box-shadow: 0px 5px 10px -5px #000000;
+  display: block;
+  position: absolute;
+  width: auto;
+  z-index: 100;
+}
+.bt-filter_content .checkedList.overflow {
+  max-width: 98%;
+  min-width: 125px;
+}
+.bt-filter_wrapper.edit-columns .checkedList.overflow {
+  width: 100%;
+}
+.bt-filter_content {
+  border: none;
+  border-image: initial;
+  display: inline-block;
+  max-height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+}
+.bt-filter_wrapper .button-container {
+  border-top: 1px solid #cccccc;
+  display: block;
+  margin-bottom: 0;
+  margin-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  white-space: nowrap;
+}
+.button-container .btn {
+  margin: 0px 3px;
+}
+.bt-filter_content div.bt-filter-field label {
+  display: inline-block;
+  font-size: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+  text-align: right;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 65px;
+}
+.btrgrid-filterSeek {
+  margin-top: 30px;
+}
+.bt-filter_content div.bt-filter-field .bt-datepicker {
+  width: 100px;
+}
+.bt-filter_content div.bt-filter-field > input {
+  width: 100px;
+}
+.bt-filter_content div.bt-filter-field {
+  margin-top: 10px;
+}
+.bt-filter_content div.filter-MinMax {
+  display: inline-block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.bt-filter_content div.filter-MinMax .bt-filter-field {
+  display: inline-block;
+}
+/* the CheckedList ul is used to display filtered items in a grid and also to show a list of fields that can be included on a report */
+ul.checkedList {
+  display: inline-block;
+  height: auto;
+  padding: 0px;
+  width: auto;
+}
+ul.checkedList.overflow > li {
+  margin-right: 15px;
+  width: 100%;
+}
+ul.checkedList input {
+  vertical-align: top;
+}
+ul.checkedList label.checkbox > input {
+  margin-top: 1px;
+}
+ul.checkedList li {
+  display: block;
+  height: auto;
+  margin-left: 3px;
+  margin-top: 10px;
+  padding-left: 15px;
+  white-space: nowrap;
+  width: auto;
+}
+ul.sortable .underline {
+  border-bottom: 1px solid silver;
+  padding-bottom: 5px;
+  position: relative;
+}
+ul.checkedList li.invisible {
+  display: none;
+}
+ul.checkedList li > .icon-drag {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: -5px;
+}
+ul.checkedList li > label {
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: normal;
+  margin-bottom: 0px;
+  padding-left: 5px;
+  padding-right: 25px;
+  text-transform: none;
+  white-space: nowrap;
+}
+ul.checkedList li > label.not-allowed {
+  cursor: not-allowed;
+}
+ul.checkedList label.checkbox {
+  display: inline-block;
+  margin-top: 0px;
+  position: relative;
+  white-space: pre-line;
+}
+ul.checkedList > li.heading {
+  font-weight: bold;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.dname .prjPart,
+.dname .fullname {
+  line-height: inherit;
+  margin: 0;
+}
+.bttr.header .dname p {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  color: #83AF33;
+  /*width: 100%;*/
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  font-size: 15px;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+.bttd.label .dname p {
+  display: inline-flex;
+  font-size: 11px;
+}
+.bttr.header .dname p.fullname {
+  font-size: 11px;
+  margin-left: 6px;
+}
+.bttd.label .dname p.fullname:before {
+  content: " | ";
+  margin: 0px 3px;
+}
+/* TABLE LISTS - use these styles to make an unordered list look like a table */
+ul.btt-table {
+  margin: 0;
+  padding: 0;
+}
+ul.btt-table > li {
+  -moz-box-shadow: 1px 1px 0px #ffffff inset;
+  -webkit-box-shadow: 1px 1px 0px #ffffff inset;
+  background-color: #fbf8f7;
+  border: 1px solid #dddddd;
+  box-shadow: 1px 1px 0px #ffffff inset;
+  font-size: 13px;
+  line-height: 150%;
+  margin-top: -1px;
+  padding: 15px;
+  vertical-align: top;
+}
+ul.btt-table > li.active {
+  background-color: #F4EFEC;
+}
+/* Generic sizes/styles for numeric/integer columns */
+th.number,
+th.date,
+.table th.number,
+.table th.date,
+td.number,
+td.date,
+.table td.number,
+.table td.date,
+td.int,
+th.int,
+.table td.int,
+.table th.int,
+td.number input,
+td.int input,
+th.textRight,
+td.textRight,
+.table th.textRight,
+.table td.textRight {
+  text-align: right;
+}
+table td.number,
+table th.number,
+td.number {
+  width: 85px;
+  white-space: nowrap;
+}
+table td.number .tooltip-inner,
+table th.number,
+td.number .tooltip-inner {
+  white-space: normal;
+}
+table td.int,
+table th.int,
+td.int {
+  width: 60px;
+}
+table td.icon,
+table th.icon,
+td.icon {
+  text-align: center;
+  width: 20px;
+}
+table td.centered,
+table th.centered,
+td.centered {
+  text-align: center !important;
+}
+/* class used for SCROLLABLE table body */
+.table-scrollable > tbody {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+}
+.table-scrollable > thead,
+.table-scrollable > thead {
+  display: block;
+  width: 100%;
+  background-color: #F4EFEC;
+}
+.table-scrollable tbody tr:first-child td {
+  border-top: 0;
+}
+.table-scrollable tbody td:first-child,
+.table-scrollable thead th:first-child,
+.table-scrollable tfoot td:first-child {
+  border-left: 0;
+}
+.table-scrollable tbody td:last-child,
+.table-scrollable thead th:last-child {
+  border-right: 1px solid transparent;
+}
+/*div.dname {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin-top: 2px;
+	display: inline-block;
+	vertical-align: top;
+}
+div.dname .prjPart {
+	font-weight: bold;
+}
+div.dname .prjPart.only {
+	font-weight: normal;
+	height: 100%;
+}
+div.dname .fullname, div.dname .prjPart {
+	height: 50%;
+	line-height: 120%;
+}
+div.dname .fullname {
+	font-size: @small;
+	color: @light-grey;
+}*/
+/* Changes to grid in a master-detail DETAIL section 
+.md-detail .btthead {
+	padding:15px 12px;
+}
+*/
+/* plain-white and small-font styles */
+.table.plain-white {
+  border-left: 0px;
+  border-right: 0px;
+}
+.table.plain-white > thead > tr > th {
+  background-color: white;
+  border-left: 0px;
+  border-right: 0px;
+}
+.table.plain-white > tbody > tr > td {
+  border: 0px;
+  box-shadow: 0px;
+  background-color: White;
+  border-bottom: 1px solid #dddddd;
+}
+.table.small-font > tbody > tr > td,
+.table.small-font > foot > tr > td {
+  font-size: 12px;
+  padding: 4px;
+}
+.table.small-font > tbody > tr > th {
+  font-size: 11px;
+  padding: 4px;
+}
+/* audit-log-entry text */
+.table .audit-log-entry,
+.btt-canvas .audit-log-entry,
+.bttd .audit-log-entry {
+  display: block;
+  color: #f39100;
+  margin-top: 3px;
+}
+.audit-log-entry {
+  color: #f39100;
+}
+/****************************** Flex-Table styles ******************************/
+@media (max-width: 960px) {
+  /* BT padding style for smaller screens/mobile */
+  div.flex-table {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+div.flex-table {
+  background-color: #fbf8f7;
+  height: 100%;
+  margin-bottom: -12px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border: 1px solid #dddddd;
+}
+div.flex-thead {
+  flex: none;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+div.flex-tbody {
+  padding-bottom: 45px;
+  overflow-y: scroll;
+  flex: 1;
+}
+div.flex-tfoot {
+  flex: none;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #696564;
+  color: white;
+}
+div.flex-tr {
+  position: relative;
+  padding-bottom: 1px;
+  display: flex;
+  flex-direction: row;
+}
+div.flex-td {
+  word-break: break-word;
+  display: flex;
+  padding: 5px 12px 5px 12px;
+  flex: 500;
+  align-items: center;
+  min-width: 170px;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+div.fixed-td {
+  word-break: break-word;
+  align-items: center;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  -ms-flex: none;
+  -webkit-box-flex: none;
+  -webkit-flex: none;
+  flex: none;
+}
+div.flex-col-slim {
+  padding: 5px 3px 5px 3px !important;
+}
+div.flex-tfoot div.flex-tr {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+div.flex-tfoot div.flex-td {
+  border-bottom: 0;
+  border-color: #696564;
+}
+div.fixed-th {
+  font-family: 'work-sans';
+  font-size: 12px;
+  font-weight: normal;
+  background-image: none;
+  color: #443E3D;
+  text-transform: uppercase;
+  background-color: #F4EFEC;
+  border: 0;
+  border-right: 1px solid #dddddd;
+  -webkit-box-align: center;
+  align-items: center;
+  background: #F4EFEC;
+  font-size: 14px;
+  margin: 0;
+  overflow: visible;
+  padding: 0 12px;
+  position: relative;
+  text-overflow: ellipsis;
+  min-height: 31px;
+  border-bottom: 1px solid #dddddd;
+  -ms-flex: none;
+  -webkit-box-flex: none;
+  -webkit-flex: none;
+  flex: none;
+}
+div.flex-th {
+  font-family: 'work-sans';
+  font-size: 14px;
+  font-weight: normal;
+  background-image: none;
+  color: #443E3D;
+  text-transform: uppercase;
+  background-color: #F4EFEC;
+  border: 0;
+  border-right: 1px solid #dddddd;
+  -webkit-box-align: center;
+  align-items: center;
+  background: #F4EFEC;
+  margin: 0;
+  overflow: visible;
+  padding: 0 12px;
+  position: relative;
+  text-overflow: ellipsis;
+  min-height: 31px;
+  border-bottom: 1px solid #dddddd;
+  display: flex;
+  flex: 500;
+  min-width: 170px;
+}
+div.flex-th:first-child,
+div.flex-td:first-child {
+  border-left: 0;
+}
+div.flex-th:last-child,
+div.flex-td:last-child {
+  border-right: 0;
+}
+/* flex td cell width styles */
+div.flex-width-date-period {
+  flex: 148;
+  min-width: 148px;
+}
+div.flex-width-date-short {
+  flex: 105;
+  min-width: 105px;
+}
+div.flex-width-numeric-sm {
+  flex: 95;
+  min-width: 95px;
+}
+div.flex-width-numeric-md {
+  flex: 110;
+  min-width: 110px;
+}
+div.flex-width-numeric-lg {
+  flex: 125;
+  min-width: 125px;
+}
+div.flex-width-currency {
+  flex: 100;
+  min-width: 100px;
+  justify-content: flex-end;
+}
+div.flex-th.flex-width-currency {
+  text-align: right;
+}
+div.flex-td.flex-width-currency {
+  word-break: initial;
+}
+div.flex-width-text-sm {
+  flex: 90;
+  min-width: 90px;
+}
+div.flex-width-text-md {
+  flex: 130;
+  min-width: 130px;
+}
+div.flex-width-text-lg {
+  flex: 250;
+  min-width: 170px;
+}
+/* flex display styles*/
+div.display-flex {
+  display: flex;
+}
+div.display-inline-flex {
+  display: inline-flex;
+}
+div.display-block {
+  display: block;
+}
+div.display-inline {
+  display: inline;
+}
+div.flex-direction-row {
+  flex-direction: row;
+}
+div.flex-direction-column {
+  flex-direction: column;
+}
+/* overflow style overrides */
+div.overflow-initial {
+  overflow: initial;
+}
+/* flex alignment styles */
+div.flex-td.flex-justify-right,
+div.flex-th.flex-justify-right {
+  justify-content: flex-end;
+}
+div.flex-td.flex-justify-left,
+div.flex-th.flex-justify-left {
+  justify-content: flex-start;
+}
+div.flex-td.flex-justify-center,
+div.flex-th.flex-justify-center {
+  justify-content: center;
+}
+div.flex-align-items-end {
+  align-items: flex-end;
+}
+div.flex-align-items-start {
+  align-items: flex-start;
+}
+div.flex-align-items-center {
+  align-items: center;
+}
+/* non flex alignment styles */
+div.text-align-left {
+  text-align: left;
+}
+div.text-align-right {
+  text-align: right;
+}
+div.text-align-center {
+  text-align: center;
+}
+/* flex grow styles */
+div.flex-1 {
+  flex: 1;
+}
+/*invoice approval status grid formatter*/
+.invoice-approval-status > p span.missing {
+  color: #D1CCC9;
+}
+.invoice-approval-status > p span.approved {
+  color: #8E8580;
+  text-decoration: line-through;
+}
+.invoice-approval-status > p span.rejected {
+  color: #db4226;
+}
+.invoice-approval-status > p span.ignored {
+  color: initial;
+  color: inherit;
+}
+.invoice-approval-status p {
+  line-height: 100%;
+  margin: 0px;
+}
+.invoice-review-notes {
+  color: inherit;
+  font-size: 11px;
+  line-height: 100%;
+  margin-bottom: 0;
+  margin-top: 3px;
+  opacity: 0.7;
+}
