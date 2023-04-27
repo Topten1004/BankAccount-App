@@ -9,7 +9,7 @@ namespace BankAccountApp.Controllers
 	public class HomeController : Controller
 	{
 		// GET: Home
-		public IActionResult Index()
+		public ActionResult Index()
 		{
 			return View();
 		}
